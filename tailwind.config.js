@@ -45,7 +45,8 @@ module.exports = {
       'green': '#13ce66',
       'gray-dark': '#273444',
       'white':'#fff',
-      'black':'#000'
+      'black':'#000',
+      'bordercolor':'#D9D9D9'
     },
     fontFamily: {
       rubik: ['Rubik', 'sans-serif']
