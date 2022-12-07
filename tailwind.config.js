@@ -33,20 +33,23 @@ module.exports = {
       base: ['16px', '24px'],
       lg: ['20px', '28px'],
       xl: ['24px', '32px'],
+      heading1: ['44px', '60px'],
+      headingSmall: ['18px', '22px'],
     },
     colors: {
       'brand': '#D9232D',
       'secondary':'#333333',
       'gray':'#797979',
       'graybg': '#EFEFF4',
-      'gray-light':'#E1E1E8',
+      'gray-light': '#d3dce6',
 
       'blue': '#1fb6ff',
       'green': '#13ce66',
       'gray-dark': '#273444',
       'white':'#fff',
       'black':'#000',
-      'bordercolor':'#D9D9D9'
+      'bordercolor':'#D9D9D9',
+      'grey-border':'#707070;'
     },
     fontFamily: {
       rubik: ['Rubik', 'sans-serif']

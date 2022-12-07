@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '../layout/header';
 import Homebanner from '../components/home/homebanner';
+import WhoWeAre from '../components/home/whoWeAre';
 
 export default function Home({children}) {
   return (
@@ -14,6 +15,7 @@ export default function Home({children}) {
        <main>
         <section className='w-100'>
             <Homebanner />
+            <WhoWeAre />            
         </section>
        </main>
       </div>

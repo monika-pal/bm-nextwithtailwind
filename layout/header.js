@@ -1,6 +1,6 @@
 import  Link  from "next/link";
-import Menu from "./Menu";
-import Topbar from "./Topbar";
+import Menu from "./menu";
+import Topbar from "./topbar";
 
 export default function Header(){
     
