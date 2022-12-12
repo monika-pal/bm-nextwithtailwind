@@ -12,16 +12,25 @@
     "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^2.0.13",
     "@tailwindcss/forms": "^0.5.3",
+    "accordion-slider": "^2.9.0",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
+    "jquery": "^3.6.1",
     "next": "13.0.6",
+    "node-sass": "^8.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-parallax": "^3.5.1",
+    "react-parallax-map": "^2.0.1",
+    "react-scroll-parallax": "^3.3.2",
     "sass": "^1.56.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.19",
     "tailwindcss": "^3.2.4"
+  },
+  "resolutions": {
+    "webpack": "5.21.2"
   }
 }

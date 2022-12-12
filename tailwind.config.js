@@ -31,13 +31,19 @@ module.exports = {
       xs:['12px','18px'],
       sm: ['14px', '20px'],
       base: ['16px', '24px'],
+      base2: ['18px', '26px'],
       lg: ['20px', '28px'],
       xl: ['24px', '32px'],
+      textxl: ['26px', '34px'],
+      xxl: ['28px', '40px'],
       heading1: ['44px', '60px'],
+      heading2: ['34px', '50px'],
       headingSmall: ['18px', '22px'],
+      headingbold:['54px', '64px']
     },
     colors: {
       'brand': '#D9232D',
+      'brandhover':'#b00e17',
       'secondary':'#333333',
       'gray':'#797979',
       'graybg': '#EFEFF4',
@@ -66,6 +72,7 @@ module.exports = {
       spacing: {
         'sp-big': '80px',
         'sp-small': '50px',
+        '0':'5px',
         '1': '10px',
         '2': '15px',
         '3': '20px',

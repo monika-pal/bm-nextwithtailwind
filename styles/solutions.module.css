@@ -1,0 +1,34 @@
+.solutionDiv{
+    /* background: red; */
+    width: 200px;
+    height: 200px;
+    transform: rotateX(60deg) rotateZ(-45deg);
+    /* transform-origin: left center; */
+    /* transform-style: preserve-3d; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+}
+.orange{
+    box-shadow: 0 23px 30px #F3722D7E;
+    background: rgba(243, 114, 44,1);
+    margin: 20px auto;
+    top:-130px;
+    z-index: 3;
+}
+.yellow{
+    box-shadow: 0 23px 30px #F9C74F7D;
+    background: rgba(249, 199, 79, 1);
+    margin: 20px auto;
+    top:-120px;
+    z-index: 2;
+}
+.green{
+    box-shadow:0 23px 30px #43AA8B80;
+    background: rgba(67, 170, 139, 1);
+    margin: 20px auto;
+    top:-110px;
+    z-index: 1;
+}
