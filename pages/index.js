@@ -3,7 +3,7 @@ import Header from '../layout/header';
 import Homebanner from '../components/home/homebanner';
 import WhoWeAre from '../components/home/whoWeAre';
 import Scrollparallex from '../components/home/scrollparallex';
-import { ParallaxProvider } from 'react-scroll-parallax';
+
 
 export default function Home({children}) {
   return (
@@ -19,12 +19,9 @@ export default function Home({children}) {
        <main>
         <section className='w-100'>
             <Homebanner />
-            
             <WhoWeAre />   
-            <ParallaxProvider>
             {/* {props.children} */}
             <Scrollparallex /> 
-            </ParallaxProvider>
             
             
                    
