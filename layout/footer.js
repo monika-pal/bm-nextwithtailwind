@@ -57,7 +57,7 @@ industries: [
 
  
     return (
-      <footer className="bg-graybg pt-sp-big">
+      <footer className="bg-graybg pt-sp-big relative">
         <div className="container-none md:container lg:container mx-auto px-3">
             <div className='w-full flex bg-white shadow-xl lg:max-w-[1454px] max-w-[90%] mx-auto px-6 py-6'>
               <div className='w-2/5'>

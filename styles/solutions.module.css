@@ -32,3 +32,93 @@
     top:-110px;
     z-index: 1;
 }
+
+
+  #pinContainer {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  #pinContainer .panel {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    text-align: center;
+    background: blue;
+    border: 3px solid black;
+  }
+
+  .panel span {
+    position: relative;
+    display: block;
+    top: 50%;
+    font-size: 80px;
+  }
+  
+  .panel.blue {
+    background-color: #3883d8;
+  }
+  
+  .panel.turqoise {
+    background-color: #38ced7;
+  }
+  
+  .panel.green {
+    background-color: #22d659;
+  }
+  
+  .panel.bordeaux {
+    background-color: #953543;
+  }
+
+  .test {
+    transition: all 0.3s ease-out;
+    width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 0 !important;
+  
+ 
+}
+.yellow {
+    background-color: yellow;
+  }
+
+
+
+
+  .section {
+    height: 70vh;
+    background: linear-gradient(160deg, #f47c66 0%,#e51906 100%);
+  }
+
+  .sticky, .sticky2 {
+    height: 100vh;
+    background: linear-gradient(160deg, #e4f5fc 0%,#bfe8f9 26%,#9fd8ef 59%,#0068f2 100%);
+    width: 100%;
+  }
+
+     .animation, .animation2 {
+      width: 100%;
+      height: 100%;
+      position: absolute;}
+
+      
+    
+
+    .heading {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+
+    }
+
+    .heading h2 {
+        font-size: 40px;
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        margin: 0;
+      }
+
+  

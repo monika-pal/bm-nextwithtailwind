@@ -83,6 +83,10 @@ module.exports = {
       boxShadow: {
         'normal': '0 3px 15px rgba(0, 0, 0, 0.06)',
         'xl':'0px 10px 50px rgba(0, 0, 0, 0.16)'
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+        'pulse-new':'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) 2s;'
       }
     },
   },

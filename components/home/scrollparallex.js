@@ -1,20 +1,31 @@
 import React, { Component } from 'react'
-import { useParallax, Parallax, ParallaxBannerLayer} from 'react-scroll-parallax';
+import { useParallax, Parallax, ParallaxBanner, ParallaxBannerLayer, ParallaxProvider} from 'react-scroll-parallax';
 // import { Parallax } from 'react-parallax';
 import styles from  '../../styles/solutions.module.css';
+import { Controller, Scene } from 'react-scrollmagic';
+import { Tween, Timeline } from 'react-gsap';
+import 'animate.css';
+
+
 
  const Scrollparallex=()=> {
 
-    // const moon = useParallax<HTMLDivElement>({
-    //     scale: [1.5, 1, 'easeInQuad'],
-    //   });
+
  
     return (
-     
-         <div className="relative" >
-            <Parallax
-            scale={[1, 1.2, 'easeInQuad']} 
-             className="moon bg-[url('/assets/img/sampleImg1.jpg')] bg-no-repeat bg-cover w-[90%] mx-auto  py-sp-big px-6 relative">
+    
+    <div className="relative">
+      
+
+   
+        <ParallaxProvider>
+        {/* <section className='h-[100vh] bg-[green] w-[100vw]'>
+
+</section> */}
+        <div className='relative w-full '>
+          <Parallax scale={[0.95, 1,'easeInQuad']} speed={50} >
+            <div 
+             className="moon bg-[url('/assets/img/sampleImg1.jpg')] bg-no-repeat bg-cover mx-auto  py-sp-big px-6 relative h-[600px]">
                 <div className="border border-white py-sp-big relative z-0">
                      <div className='absolute left-0 right-0 top-0 bottom-0 blur-[3px] bg-[rgba(0,0,0,0.5)]'>
                     </div>  
@@ -24,9 +35,14 @@ import styles from  '../../styles/solutions.module.css';
                     <button className='border border-white h-[50px] w-[220px] rounded-[5px] bg-brand mx-auto text-white relative mt-6 block'>Find More</button>
                 </div>
                
+            </div>
             </Parallax>
-
-            <div className="w-full py-sp-big">
+            </div>
+           
+          
+            
+            <section  className="w-[100%] h-[100vh] relative">
+          <div className=" h-[100vh] py-sp-big">
                 <div className='container-none md:container lg:container mx-auto py-5 px-3'>
                     <div className='flex items-center'>
                         <div className='w-[25%]'>
@@ -34,17 +50,19 @@ import styles from  '../../styles/solutions.module.css';
                             <p className='lg:text-textxl text-lg text-secondary mb-5 lg:leading-[50px] leading-[40px]'>Transforming businesses with tech-enabled procurement & improving supply chain with customized manufacturing supplies, Moglix drives efficiency all around you.</p>
                             <button className='w-[230px] text-center justify-center items-center font-bold lg:text-base2 text-base text-white bg-brand h-[50px] flex shadow-[0 5px 10px rgba(217, 35, 45, 0.24)] hover:bg-brandhover'><span className='mr-1'>Know More</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path fill="white" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg></button>
                         </div>
-                        <div className='w-[50%]'>
-                            <div className='flex flex-wrap relative'>
-                                <Parallax speed={-10} translateY={['0px', '-50px']} className="z-[3] relative">
+                        <div className='w-[50%] min-h-[600px] relative'>
+                            <div className='flex flex-wrap absolute top-[50%] mx-auto justify-center'>
+                            
+                                <Parallax speed={20}  translateY={['0px', '-100px']} className="z-[3] relative">
                                     <ParallaxBannerLayer opacity={[1, 0.75]} className={[styles.solutionDiv, styles.orange].join(" ")}></ParallaxBannerLayer>
                                 </Parallax>
-                                <Parallax speed={-10} translateY={['0px', '1px']} className="z-[2] relative">
+                                <Parallax speed={20}  translateY={['0px', '1px']} className="z-[2] relative">
                                     <ParallaxBannerLayer opacity={[1, 0.75]} className={[styles.solutionDiv, styles.yellow].join(" ")} ></ParallaxBannerLayer>
                                 </Parallax>
-                                <Parallax speed={-10} translateY={['0px', '50px']} className="z-[1] relative">
+                                <Parallax speed={20}  translateY={['0px', '100px']} className="z-[1] relative">
                                     <ParallaxBannerLayer opacity={[1, 0.75]} className={[styles.solutionDiv, styles.green].join(" ")} ></ParallaxBannerLayer>
                                 </Parallax>
+                                
                                 
                             </div>
                             
@@ -90,10 +108,13 @@ import styles from  '../../styles/solutions.module.css';
                     </div>
                 </div>
             </div>
-
-
-        </div>
+          </section>
+        </ParallaxProvider>
+        <div className="section" />
+    
+         
         
+  </div>
      
     )
   
