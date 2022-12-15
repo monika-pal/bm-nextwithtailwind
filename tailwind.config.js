@@ -15,17 +15,17 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1.25rem',
+        DEFAULT: '3.25rem',
         sm: '1.25rem',
-        md:'1.25rem',
-        lg: '1.25rem',
-        xl: '1.25rem',
+        md:'3rem',
+        lg: '3rem',
+        xl: '5rem',
       }
     },
     screens: {
       sm: '767px',
-      md: '100%',
-      lg: '1536px',
+      md: '90%',
+      lg: '1454px',
     },
     fontSize: {
       xs:['12px','18px'],
@@ -72,7 +72,8 @@ module.exports = {
       spacing: {
         'sp-big': '80px',
         'sp-small': '50px',
-        '0':'5px',
+        '0':'0px',
+        'xsp':'5px',
         '1': '10px',
         '2': '15px',
         '3': '20px',

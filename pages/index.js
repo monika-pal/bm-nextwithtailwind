@@ -3,6 +3,7 @@ import Header from '../layout/header';
 import Homebanner from '../components/home/homebanner';
 import WhoWeAre from '../components/home/whoWeAre';
 import Scrollparallex from '../components/home/scrollparallex';
+import Findmore from '../components/home/findmore';
 
 
 export default function Home({children}) {
@@ -19,8 +20,10 @@ export default function Home({children}) {
        <main>
         <section className='w-100'>
             <Homebanner />
+            
             <WhoWeAre />   
             {/* {props.children} */}
+            <Findmore />
             <Scrollparallex /> 
             
             
