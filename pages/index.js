@@ -4,7 +4,7 @@ import Homebanner from '../components/home/homebanner';
 import WhoWeAre from '../components/home/whoWeAre';
 import Scrollparallex from '../components/home/scrollparallex';
 import { ParallaxProvider } from 'react-scroll-parallax';
-
+import ScrollSlider from '../components/home/scrollSlider';
 export default function Home({children}) {
   return (
     <div>
@@ -25,7 +25,7 @@ export default function Home({children}) {
             {/* {props.children} */}
             <Scrollparallex /> 
             </ParallaxProvider>
-            
+            <ScrollSlider/>
             
                    
         </section>
