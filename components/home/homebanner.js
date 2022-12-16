@@ -1,35 +1,66 @@
-import React, { Component, useEffect,  } from 'react';
+import React, { Component, useEffect, } from 'react';
 import { useState } from 'react';
 import $ from 'jquery';
+var document = require("global/document")
+var window = require("global/window")
 
 
 const Homebanner = () => {
-  
-  
+  useEffect(() => {
+    $(document).ready(function() {
+      var $item = 0,
+        $itemNo = $(".hero figure").length;
+      function transitionSlide() {
+        $item++;
+        if ($item > $itemNo - 1) {
+          $item = 0;
+        }
+        $(".hero figure").removeClass("on");
+        $(".hero figure")
+          .eq($item)
+          .addClass("on");
+      }
+      var $autoTransition = setInterval(transitionSlide, 3500);
+    
+      $(".hero figure").hover(function() {
+        clearInterval($autoTransition);
+        $item = $(this).index();
+        $(".hero figure").removeClass("on");
+        $(".hero figure")
+          .eq($item)
+          .addClass("on");
+        $autoTransition = setInterval(transitionSlide, 3500);
+      });
+    });
+    
 
-  const BannerAccordionContent = [
-    {
-      id: 1,
-      stripHeading: 'Moglix for supply chain',
-      imgPath: '/assets/img/sampleImg1.jpg',
-      heading: 'The road to sustainable & efficient supply chain starts here.',
-      subheading: 'From procurement to financing, your partner in solving toughest of supply chain problems.'
-    },
-    {
-      id: 2,
-      stripHeading: 'Moglix in news',
-      imgPath: '/assets/img/sampleImg2.jpg',
-      heading: 'The road to sustainable & efficient supply chain starts here.',
-      subheading: 'From procurement to financing, your partner in solving toughest of supply chain problems.'
-    },
-    {
-      id: 3,
-      stripHeading: 'Work with us',
-      imgPath: '/assets/img/sampleImg3.jpg',
-      heading: 'The road to sustainable & efficient supply chain starts here.',
-      subheading: 'From procurement to financing, your partner in solving toughest of supply chain problems.'
-    },
-  ];
+
+  }, []);
+
+
+  // const BannerAccordionContent = [
+  //   {
+  //     id: 1,
+  //     stripHeading: 'Moglix for supply chain',
+  //     imgPath: '/assets/img/sampleImg1.jpg',
+  //     heading: 'The road to sustainable & efficient supply chain starts here.',
+  //     subheading: 'From procurement to financing, your partner in solving toughest of supply chain problems.'
+  //   },
+  //   {
+  //     id: 2,
+  //     stripHeading: 'Moglix in news',
+  //     imgPath: '/assets/img/sampleImg2.jpg',
+  //     heading: 'The road to sustainable & efficient supply chain starts here.',
+  //     subheading: 'From procurement to financing, your partner in solving toughest of supply chain problems.'
+  //   },
+  //   {
+  //     id: 3,
+  //     stripHeading: 'Work with us',
+  //     imgPath: '/assets/img/sampleImg3.jpg',
+  //     heading: 'The road to sustainable & efficient supply chain starts here.',
+  //     subheading: 'From procurement to financing, your partner in solving toughest of supply chain problems.'
+  //   },
+  // ];
 
   return (
     <div>
@@ -41,7 +72,7 @@ const Homebanner = () => {
                 <span className='text-brand'>Grow </span>with <br /> Moglix
               </h1>
               <p className='mb-[15px]'>Learn how we are driving change for <br /> businesses across the spectrum</p>
-              <div className="mt-1 flex rounded-md shadow-sm w-[380px] z-[4]" >
+              <div className="mt-1 flex rounded-md shadow-sm w-[380px] z-[10]" >
                 <div className="relative flex flex-grow items-stretch focus-within:z-10">
                   <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-2">
                     <svg className="h-3 w-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z" /></svg>
@@ -66,7 +97,36 @@ const Homebanner = () => {
             </div>
           </div>
           <div className="w-3/4">
-            <div className="accordion">
+            <div id="hero">
+              <div class="hero">
+                <figure class="on">
+                  <img src="/assets/img/banner1.png" />
+                  <div>
+                    <h2>Heading 1</h2>
+                    <p>Hella wayfarers messenger bag normcore readymade slow-carb quinoa tumeric fixie ramps.</p>
+                    <p><a href="#">Learn More</a></p>
+                  </div>
+                </figure>
+                <figure>
+                <img src="/assets/img/banner2.png" />
+                  <div>
+                    <h2>Heading 2</h2>
+                    <p>Hella wayfarers messenger bag normcore readymade slow-carb quinoa tumeric fixie ramps.</p>
+                    <p><a href="#">Learn More</a></p>
+                  </div>
+                </figure>
+                <figure>
+                <img src="/assets/img/banner3.png" />
+                  <div>
+                    <h2>Heading 3</h2>
+                    <p>Hella wayfarers messenger bag normcore readymade slow-carb quinoa tumeric fixie ramps.</p>
+                    <p><a href="#">Learn More</a></p>
+                  </div>
+                </figure>
+               
+              </div>
+            </div>
+            {/* <div className="accordion">
               <ul>
                 {BannerAccordionContent.map((bannerData) =>
                   <li key={bannerData.id}>
@@ -81,12 +141,12 @@ const Homebanner = () => {
                   </li>
                 )}
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
 
       </nav>
-      
+
     </div>
   )
 
