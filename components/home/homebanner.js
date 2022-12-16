@@ -20,16 +20,16 @@ const Homebanner = () => {
           .eq($item)
           .addClass("on");
       }
-      var $autoTransition = setInterval(transitionSlide, 3500);
+       var $autoTransition = setInterval(transitionSlide, 3500);
     
       $(".hero figure").hover(function() {
-        clearInterval($autoTransition);
+         clearInterval($autoTransition);
         $item = $(this).index();
         $(".hero figure").removeClass("on");
         $(".hero figure")
           .eq($item)
           .addClass("on");
-        $autoTransition = setInterval(transitionSlide, 3500);
+         $autoTransition = setInterval(transitionSlide, 3500);
       });
     });
     
@@ -64,7 +64,7 @@ const Homebanner = () => {
 
   return (
     <div>
-      <nav className="container-none md:container lg:container mx-auto py-5 px-3">
+      <nav className="container-none md:container lg:container mx-auto px-3">
         <div className="flex">
           <div className="w-1/4 flex items-center ">
             <div className='flex justify-center flex-col'>
@@ -100,30 +100,29 @@ const Homebanner = () => {
             <div id="hero">
               <div class="hero">
                 <figure class="on">
-                  <img src="/assets/img/banner1.png" />
+                  <img src="/assets/img/banner1.png"/>
                   <div>
-                    <h2>Heading 1</h2>
-                    <p>Hella wayfarers messenger bag normcore readymade slow-carb quinoa tumeric fixie ramps.</p>
-                    <p><a href="#">Learn More</a></p>
+                    <h2>The road to sustainable & efficient supply chain starts here.</h2>
+                    <p>From procurement to financing, your partner in solving toughest of supply chain problems.</p>
                   </div>
+                  <p className="verticle-heading">Work with us</p>
                 </figure>
                 <figure>
-                <img src="/assets/img/banner2.png" />
+                <img src="/assets/img/banner2.png"/>
                   <div>
                     <h2>Heading 2</h2>
                     <p>Hella wayfarers messenger bag normcore readymade slow-carb quinoa tumeric fixie ramps.</p>
-                    <p><a href="#">Learn More</a></p>
                   </div>
+                  <p className="verticle-heading">Moglix in news</p>
                 </figure>
                 <figure>
-                <img src="/assets/img/banner3.png" />
+                <img src="/assets/img/banner3.png"/>
                   <div>
                     <h2>Heading 3</h2>
                     <p>Hella wayfarers messenger bag normcore readymade slow-carb quinoa tumeric fixie ramps.</p>
-                    <p><a href="#">Learn More</a></p>
                   </div>
+                  <p className="verticle-heading">Moglix in news</p>
                 </figure>
-               
               </div>
             </div>
             {/* <div className="accordion">

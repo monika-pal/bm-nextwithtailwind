@@ -256,7 +256,6 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -276,6 +275,28 @@
   transition: 0.8s linear;
   -webkit-filter: saturate(25%);
   filter: saturate(25%);
+  &:not(:last-child){
+    margin-right: 10px;
+ 
+  }
+  .verticle-heading{
+    opacity: 1;
+    bottom: 26px;
+    font-size: 21px;
+    line-height: 28px;
+    display: inline-block;
+    width: auto;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    position: absolute;
+    left: 16px;
+    white-space: nowrap;
+    color:#fff !important;
+    z-index: 10;
+   transition: 0.5s ease all
+   
+  }
 }
 .hero figure:not(.on):hover {
   cursor: pointer;
@@ -292,9 +313,12 @@
   -webkit-transition: 0.8s linear;
   -o-transition: 0.8s linear;
   transition: 0.8s linear;
-  z-index: 20;
+  z-index: 5;
   -webkit-filter: saturate(100%);
   filter: saturate(100%);
+  .verticle-heading{
+       opacity: 0;
+  }
 }
 .hero figure div {
   -webkit-animation: infoOut;
@@ -305,10 +329,10 @@
 
 .hero figure.on div {
   position: absolute;
-  bottom: 20%;
-  left: 5%;
-  right: 5%;
-  padding: 20px 50px;
+    bottom: 0px;
+    left: 0px;
+    right: unset;
+    padding: 20px 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,14 +347,15 @@
   animation: infoIn 1.2s;
 }
 .hero figure.on div h2 {
-  font-size: 3em;
+  font-size: 32px;
+  line-height: 38px;
   width: 100%;
-  padding-bottom: 20px;
-
+  padding-bottom: 0px;
   margin-bottom: 10px;
+  font-weight: 500;
 }
 .hero figure.on div p {
-  font-size: 1.7em;
+  font-size: 15px;
   width: 100%;
   margin-bottom: 0;
 }
