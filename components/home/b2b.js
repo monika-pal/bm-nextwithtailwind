@@ -16,8 +16,8 @@ const B2B =()=> {
             x:10,
           transition:{
             type: "spring",
-            bounce: 0.4,
-            // duration: 2,
+            // bounce: 0.4,
+            duration: 1,
             // ease:'easeIn'
             // delay:200,
           }
@@ -31,8 +31,8 @@ const B2B =()=> {
             x:500,
             transition: {
                 type: "spring",
-                bounce: 0.4,
-                // duration: 2,
+                // bounce: 0.4,
+                duration: 1,
                 // ease:'easeInOut'
                 // delay:100
               }
@@ -46,7 +46,7 @@ const B2B =()=> {
     }, [inView]);
  
     return (
-      <section >
+      <section className='overflow-x-hidden'>
          <div className='container-none md:container lg:container mx-auto py-5 px-3 text-center'>
             <div className="flex justify-end items-center bg-[url('/assets/img/rB2Bimg.jpg')] py-[8rem] bg-no-repeat bg-contain">
                 <motion.div className='w-2/3 bg-brand p-[5rem]' animate={animatepara}>
