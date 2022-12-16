@@ -1,10 +1,53 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import styles from '../../styles/counter.module.scss';
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+import 'animate.css';
 
 const Counters =()=> {
+
+    const {ref, inView} = useInView();
+    const animatepara = useAnimation();
+
+  
+    useEffect(() => {
+     
+      if(inView){
+        animatepara.start({
+            x:10,
+          transition:{
+            type: "spring",
+            // bounce: 0.4,
+            duration: 1,
+            // ease:'easeIn'
+            // delay:200,
+          }
+        
+         
+        })
+       
+      }
+      if(!inView){
+        animatepara.start({
+            x:500,
+            transition: {
+                type: "spring",
+                // bounce: 0.4,
+                duration: 1,
+                // ease:'easeInOut'
+                // delay:100
+              }
+            
+         
+        })
+      
+      }
+     
+      
+    }, [inView]);
   
     return (
-      <section className='py-sp-big'>
+      <section className='py-sp-big overflow-x-hidden'>
             <div className='container-none md:container lg:container mx-auto py-5 px-3 text-center'>
                 <h2 className='text-heading1 font-bold text-secondary text-center'>The numbers behind the <br/>strength of Moglix’s solutions</h2>
                 <div className='h-[430px] flex w-full relative pt-[80px]'>
