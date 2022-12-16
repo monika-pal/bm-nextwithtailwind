@@ -4,6 +4,8 @@ import Homebanner from '../components/home/homebanner';
 import WhoWeAre from '../components/home/whoWeAre';
 import Scrollparallex from '../components/home/scrollparallex';
 import Findmore from '../components/home/findmore';
+import Counters from '../components/home/counters';
+import B2B from '../components/home/b2b';
 
 
 export default function Home({children}) {
@@ -25,6 +27,8 @@ export default function Home({children}) {
             {/* {props.children} */}
             <Findmore />
             <Scrollparallex /> 
+            <Counters />
+            <B2B />
             
             
                    

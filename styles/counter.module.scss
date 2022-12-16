@@ -1,0 +1,153 @@
+.counterdotline{
+    & > span{
+        top:10px;
+    }
+    &.counterdotline1{
+        width:150%;
+        height:160px;
+        position: relative;
+        &::before{
+            bottom:0px;
+            border-left: 1px dashed #CCCCCC;
+            content: '';
+            width: 65%;
+            position: absolute;
+            left: 34%;
+            top:10px;
+            border-radius:0 0 0 20px ;
+            border-bottom: 1px dashed #CCCCCC;
+        }
+        & > span{
+            left: 33%;
+            position: absolute;
+        }
+    }
+    &.counterdotline2{
+        width:150%;
+        height: 140px;
+        position: relative;
+        &::before{
+            bottom: 0;
+            border-left: 1px dashed #CCCCCC;
+            content: '';
+            width: 65%;
+            position: absolute;
+            top:10px;
+            left: 34%;
+            // border-radius:0 0 0 20px ;
+            // border-bottom: 1px dashed #CCCCCC;
+        }
+        & > span{
+            left: 33%;
+            position: absolute;
+        }
+    }
+    &.counterdotline3{
+        width:50%;
+        height:170px;
+        position: relative;
+        &::before{
+            bottom: 0;
+            border-left: 1px dashed #CCCCCC;
+            content: '';
+            width: 3px;
+            position: absolute;
+            right:0;
+            top:10px;
+            border-radius:0;
+            border-bottom: 1px dashed #CCCCCC;
+        }
+        & > span{
+            right: -3px;
+            position: absolute;
+        }
+    }
+    &.counterdotline4{
+        width:150%;
+        height:265px;
+        position: relative;
+        &::before{
+            bottom: 0px;
+            border-right: 1px dashed #CCCCCC;
+            content: '';
+            width: 66%;
+            position: absolute;
+            right:67%;
+            top:10px;
+            border-radius:0 0 20px 0px ;
+            border-bottom: 1px dashed #CCCCCC;
+        }
+        & > span{
+            right: 66%;
+            position: absolute;
+        }
+    }
+   
+}
+
+@mixin ripple($duration, $delay, $bg) {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: $bg;
+    border-radius: 100%;
+    animation-name: ripple;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.65,0,.34,1);
+    z-index: -1;
+}
+
+.counterdot{
+    width: 12px;
+    height: 12px;
+    display: block;
+    border-radius: 50%;
+   
+    &.counterdot1{
+        background: #F3722C;
+        &::after {
+            @include ripple(2s, 0s,#F3722C);
+          }
+    }
+    &.counterdot2{
+        background: #90BE6D;
+        &::after {
+            @include ripple(2s, 0s,#90BE6D);
+          }
+    }
+    &.counterdot3{
+        background: #F8961E;
+        &::after {
+            @include ripple(2s, 0s,#F8961E);
+          }
+    }
+    &.counterdot4{
+        background: #43AA8B;
+        &::after {
+            @include ripple(2s, 0s,#43AA8B);
+          }
+    }
+}
+@keyframes ripple {
+    from {
+      opacity: 1;
+      transform: scale3d(0.75,0.75,1);
+    }
+    
+    to {
+      opacity: 0;
+      transform: scale3d(2,2,1);
+    }
+  }
