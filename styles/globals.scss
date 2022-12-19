@@ -437,3 +437,11 @@ width: 80%;
 height: 10px;
 
 }
+.slick-slide{
+& > div{
+  margin: 10px;
+}
+}
+.scrollSliderCardHeight{
+  height: calc(100% - 287px);
+}

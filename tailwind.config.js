@@ -39,7 +39,7 @@ module.exports = {
       heading1: ['44px', '60px'],
       heading2: ['34px', '50px'],
       headingSmall: ['18px', '22px'],
-      headingbold:['54px', '64px']
+      headingbold:['54px', '64px'],
     },
     colors: {
       'brand': '#D9232D',
@@ -60,6 +60,8 @@ module.exports = {
       'progressColor2': '#F8961E',
       'progressColor3': '#F3722C',
       'progressColor4': '#D9232D',
+      'date-grey' :'#90909d',
+      'anchor-blue' : '#2369D9'
     },
     fontFamily: {
       rubik: ['Rubik', 'sans-serif']
@@ -83,7 +85,7 @@ module.exports = {
         '3': '20px',
         '4': '25px',
         '5': '30px',
-        '6': '40px'
+        '6': '40px',
       },
       boxShadow: {
         'normal': '0 3px 15px rgba(0, 0, 0, 0.06)',
