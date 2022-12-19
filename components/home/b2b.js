@@ -6,10 +6,14 @@ import styles from '../../styles/b2b.module.scss';
 
 const B2B =()=> {
   const refSCROLL = useRef(null);
-  const { scrollYProgress } = useScroll(refSCROLL);
+  const { scrollYProgress } = useScroll({ 
+    
+      target: refSCROLL,
+      offset: [ "start start","end end"]
+    
+   });
  
 
-    // const [scrollPos, getscrollPos] = useState(0);
     const {ref, inView} = useInView();
     const animatepara = useAnimation();
 
@@ -52,7 +56,7 @@ const B2B =()=> {
     }, [inView]);
  
     return (
-      <div className='z-[1] relative' ref={refSCROLL}>
+      <div className='z-[1] relative' ref={refSCROLL} >
               <div class="container-none md:container left-0 right-0 lg:container mx-auto py-5 px-3 text-center absolute top-0 bottom-0">
                 <motion.div className={[styles.dashedLine,styles.dashedLine1].join(' ')} style={{ scaleY:scrollYProgress }}> </motion.div>
                 <motion.div className={[styles.dashedLine,styles.dashedLine2].join(' ')} style={{ scaleY:scrollYProgress }}></motion.div>
@@ -61,7 +65,7 @@ const B2B =()=> {
                 <motion.div className={[styles.dashedLine,styles.dashedLine5].join(' ')} style={{ scaleY:scrollYProgress }}></motion.div>
                 <motion.div className={[styles.dashedLine,styles.dashedLine6].join(' ')} style={{ scaleY:scrollYProgress }}></motion.div>
             </div>
-      <section className='overflow-x-hidden z-[2] relative'>
+      <section className='overflow-x-hidden z-[2] relative' >
           <div className='container-none md:container lg:container mx-auto py-5 px-3 text-center'>
             <div className="flex justify-end items-center bg-[url('/assets/img/rB2Bimg.jpg')] py-[8rem] bg-no-repeat bg-contain">
                 <motion.div className='w-2/3 bg-brand p-[5rem]' animate={animatepara}>
