@@ -6,6 +6,9 @@ import Scrollparallex from '../components/home/scrollparallex';
 import Findmore from '../components/home/findmore';
 import Counters from '../components/home/counters';
 import B2B from '../components/home/b2b';
+import { ParallaxProvider } from 'react-scroll-parallax';
+// import { motion, useAnimation } from "framer-motion";
+// import { styles } from '../styles/Home.module.scss';
 
 
 export default function Home({children}) {
@@ -22,13 +25,15 @@ export default function Home({children}) {
        <main>
         <section className='w-100'>
             <Homebanner />
-            
+            <ParallaxProvider>
             <WhoWeAre />   
             {/* {props.children} */}
             <Findmore />
             <Scrollparallex /> 
             <Counters />
+            
             <B2B />
+            </ParallaxProvider>
             
             
                    
