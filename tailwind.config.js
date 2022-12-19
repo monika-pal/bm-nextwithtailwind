@@ -55,7 +55,11 @@ module.exports = {
       'white':'#fff',
       'black':'#000',
       'bordercolor':'#D9D9D9',
-      'grey-border':'#707070;'
+      'grey-border':'#707070;',
+      'progressColor1': '#F9C74F',
+      'progressColor2': '#F8961E',
+      'progressColor3': '#F3722C',
+      'progressColor4': '#D9232D',
     },
     fontFamily: {
       rubik: ['Rubik', 'sans-serif']
