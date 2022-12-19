@@ -7,44 +7,44 @@ import 'animate.css';
 const Counters =()=> {
 
     const {ref, inView} = useInView();
-    const animatepara = useAnimation();
+    // const animationdot1 = useAnimation();
+    // const animationdot2 = useAnimation();
+    // const animationdot3 = useAnimation();
+    // const animationdot4 = useAnimation();
 
   
-    useEffect(() => {
+    // useEffect(() => {
      
-      if(inView){
-        animatepara.start({
-            x:10,
-          transition:{
-            type: "spring",
-            // bounce: 0.4,
-            duration: 1,
-            // ease:'easeIn'
-            // delay:200,
-          }
+    //   if(inView){
+    //     animationdot1.start({
+    //         x:10,
+    //       transition:{
+    //         type: "spring",
+    //         duration: 1,
+    //       }
         
          
-        })
+    //     })
        
-      }
-      if(!inView){
-        animatepara.start({
-            x:500,
-            transition: {
-                type: "spring",
-                // bounce: 0.4,
-                duration: 1,
-                // ease:'easeInOut'
-                // delay:100
-              }
+    //   }
+    //   if(!inView){
+    //     animationdot.start({
+    //         x:500,
+    //         transition: {
+    //             type: "spring",
+    //             // bounce: 0.4,
+    //             duration: 1,
+    //             // ease:'easeInOut'
+    //             // delay:100
+    //           }
             
          
-        })
+    //     })
       
-      }
+    //   }
      
       
-    }, [inView]);
+    // }, [inView]);
   
     return (
       <section className='py-sp-big overflow-x-hidden'>
