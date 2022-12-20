@@ -1,0 +1,31 @@
+.dashedLine{
+    width: 2px;
+    position: absolute;
+    z-index: 1;
+    // min-height: 1000px;
+    // height: 1450px;
+    border-left:1px dashed RED;
+    bottom: 0;
+    top:30px;
+    transform-origin:0 0;
+    &.dashedLine1{
+        left:47px;
+        // top:0;
+    }
+    &.dashedLine2{
+        left:32.6%;
+    }
+    &.dashedLine3{
+        left:35.25%;
+    }
+    &.dashedLine4{
+        left:64.69%;
+    }
+    &.dashedLine5{
+        left:67.36%;
+    }
+    &.dashedLine6{
+        left:96.75%;
+        top:32%
+    }
+}
