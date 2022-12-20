@@ -3,32 +3,32 @@
         top:10px;
     }
     &.counterdotline1{
-        width:150%;
+        width:145%;
         height:160px;
         position: relative;
         &::before{
             bottom:0px;
-            border-left: 1px dashed #CCCCCC;
             content: '';
-            width: 65%;
+            width: 69%;
             position: absolute;
-            left: 34%;
+            right: -14px;
             top:10px;
-            border-radius:0 0 0 20px ;
-            border-bottom: 1px dashed #CCCCCC;
+            // border-radius:0 0 0 20px ;
+            border-bottom: 2px dashed #CCCCCC;
         }
         & > span{
-            left: 33%;
+            left: 32.8%;
             position: absolute;
         }
     }
+   
     &.counterdotline2{
         width:150%;
         height: 140px;
         position: relative;
         &::before{
             bottom: 0;
-            border-left: 1px dashed #CCCCCC;
+            border-left: 2px dashed #CCCCCC;
             content: '';
             width: 65%;
             position: absolute;
@@ -48,14 +48,14 @@
         position: relative;
         &::before{
             bottom: 0;
-            border-left: 1px dashed #CCCCCC;
+            border-left: 2px dashed #CCCCCC;
             content: '';
             width: 3px;
             position: absolute;
             right:0;
             top:10px;
             border-radius:0;
-            border-bottom: 1px dashed #CCCCCC;
+            border-bottom: 2px dashed #CCCCCC;
         }
         & > span{
             right: -3px;
@@ -63,25 +63,48 @@
         }
     }
     &.counterdotline4{
-        width:150%;
-        height:265px;
+        width: 98%;
+        height: 265px;
         position: relative;
+        margin-left: -48%;
         &::before{
             bottom: 0px;
-            border-right: 1px dashed #CCCCCC;
+            border-bottom: 2px dashed #CCCCCC;
             content: '';
-            width: 66%;
+            width: 101%;
             position: absolute;
-            right:67%;
+            right:0;
             top:10px;
-            border-radius:0 0 20px 0px ;
-            border-bottom: 1px dashed #CCCCCC;
+            // border-radius:0 0 20px 0px ;
         }
         & > span{
-            right: 66%;
+            right: -6px;
             position: absolute;
         }
     }
+   
+   
+}
+.counterdotline12{
+    
+    border-left: 2px dashed #CCCCCC;
+    bottom: 0px;
+    width: 20px;
+    position: absolute;
+    left: 48.7%;
+    top: 74%;
+    // border-radius: 0 0 0 20px;
+    bottom: -43px;
+    
+}
+.counterdotline42{
+    bottom: -39px;
+    content: "";
+    width: 66%;
+    position: absolute;
+    right: 50%;
+    top: 42%;
+    border-right: 2px dashed #CCCCCC;
    
 }
 

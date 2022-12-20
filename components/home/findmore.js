@@ -12,7 +12,7 @@ const Findmore =()=> {
   
     useEffect(() => {
       let scalePos = document.getElementById('scale-section');
-      console.log(scalePos.offsetTop)
+      // console.log(scalePos.offsetTop)
       getscrollPos(scalePos.offsetTop)
       if(inView){
         animateVideoCaption.start({
