@@ -2,14 +2,22 @@ import React, { useEffect,useState,useRef } from 'react';
 import { motion, useAnimation,useScroll, useSpring  } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import 'animate.css';
+import {Parallax} from 'react-scroll-parallax';
 import styles from '../../styles/b2b.module.scss';
 
+
+
 const B2B =()=> {
+  
   const refSCROLL = useRef(null);
+  const [scrollPos, getscrollPos] = useState(0);
   const { scrollYProgress } = useScroll({ 
-    
       target: refSCROLL,
-      offset: [ "start start","end end"]
+      offset: [ "center","end"],
+      transition:{
+        duration:2,
+        type:'spring'
+      }
     
    });
  
@@ -22,6 +30,9 @@ const B2B =()=> {
      
      
       if(inView){
+        let scalePos = document.getElementById('scale-section');
+      // console.log(scalePos.offsetTop)
+      getscrollPos(scalePos.offsetTop)
         animatepara.start({
             x:10,
           transition:{
@@ -56,7 +67,10 @@ const B2B =()=> {
     }, [inView]);
  
     return (
-      <div className='z-[1] relative' ref={refSCROLL} >
+      <div ref={refSCROLL} className="mb-[-40px]">
+      <Parallax id="scale-section" startScroll={scrollPos - 300} endScroll={scrollPos} className='z-[1] relative bg-[url("/assets/img/block_background.png")] py-0 bg-no-repeat bg-contain' >
+        <Parallax speed={10} >
+          
               <div class="container-none md:container left-0 right-0 lg:container mx-auto py-5 px-3 text-center absolute top-0 bottom-0">
                 <motion.div className={[styles.dashedLine,styles.dashedLine1].join(' ')} style={{ scaleY:scrollYProgress }}> </motion.div>
                 <motion.div className={[styles.dashedLine,styles.dashedLine2].join(' ')} style={{ scaleY:scrollYProgress }}></motion.div>
@@ -65,19 +79,20 @@ const B2B =()=> {
                 <motion.div className={[styles.dashedLine,styles.dashedLine5].join(' ')} style={{ scaleY:scrollYProgress }}></motion.div>
                 <motion.div className={[styles.dashedLine,styles.dashedLine6].join(' ')} style={{ scaleY:scrollYProgress }}></motion.div>
             </div>
-      <section className='overflow-x-hidden z-[2] relative' >
-          <div className='container-none md:container lg:container mx-auto py-5 px-3 text-center'>
-            <div className="flex justify-end items-center bg-[url('/assets/img/rB2Bimg.jpg')] py-[8rem] bg-no-repeat bg-contain">
-                <motion.div className='w-2/3 bg-brand p-[5rem]' animate={animatepara}>
-                    <p className='text-white text-heading2 font-bold text-left'>
-                    At Moglix Business we are on a mission to reimagine B2B commerce and supply chain practice for enterprises.
-                    </p>
-                </motion.div>
-            </div>
-            </div>
-         <br ref={ref} />
-      </section>
-      <section className='z-[2] relative'>
+        <section className='overflow-x-hidden z-[3] relative'>
+            <div className='container-none md:container lg:container mx-auto py-5 px-3 text-center'>
+              <div className="flex justify-end items-center bg-[url('/assets/img/rB2Bimg.jpg')] py-[8rem] bg-no-repeat bg-contain">
+                  <motion.div className='w-2/3 bg-brand p-[5rem]' animate={animatepara}>
+                      <p className='text-white text-heading2 font-bold text-left'>
+                      At Moglix Business we are on a mission to reimagine B2B commerce and supply chain practice for enterprises.
+                      </p>
+                  </motion.div>
+              </div>
+              </div>
+          <br ref={ref} />
+        </section>
+      
+      <section className='z-[3] relative'>
         <div className='container-none md:container lg:container mx-auto py-5 px-3 text-center'>
           <div className='flex flex-wrap mx-[-20px]'>
             <div className='w-1/3 pr-[20px] pl-[40px]'>
@@ -125,6 +140,8 @@ const B2B =()=> {
             
         </div>
       </section>
+      </Parallax>
+      </Parallax>
       </div>
       
 

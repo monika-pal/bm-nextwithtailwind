@@ -1,12 +1,12 @@
 .dashedLine{
     width: 2px;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     // min-height: 1000px;
     // height: 1450px;
-    border-left:1px dashed RED;
+    border-left:2px dashed #e6e6e6;
     bottom: 0;
-    top:30px;
+    top:120px;
     transform-origin:0 0;
     &.dashedLine1{
         left:47px;
@@ -26,6 +26,6 @@
     }
     &.dashedLine6{
         left:96.75%;
-        top:32%
+        
     }
 }
