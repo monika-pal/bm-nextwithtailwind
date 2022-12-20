@@ -10,7 +10,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 // import { motion, useAnimation } from "framer-motion";
 // import { styles } from '../styles/Home.module.scss';
 import AwardsMarquee  from '../components/home/awardsMarquee';
-
+import Transformations from '../components/home/transformations';
 
 export default function Home({children}) {
   return (
@@ -36,7 +36,7 @@ export default function Home({children}) {
             <B2B />
             </ParallaxProvider>
               <AwardsMarquee/>
-            
+            <Transformations/>
                    
         </section>
        </main>
