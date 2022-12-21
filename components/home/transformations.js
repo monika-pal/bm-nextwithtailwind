@@ -26,8 +26,8 @@ export default function transformations() {
               </div>
             </div>
             <div className='w-1/2 px-[20px]'>
-              <div className="bg-[url('/assets/img/pdf.svg')]">
-
+              <div className="relative transformation-img-section">
+              <img src="/assets/img/transformation.png"  alt=""/>
               </div>
             </div>
           </div>
