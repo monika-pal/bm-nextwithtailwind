@@ -445,3 +445,28 @@ height: 10px;
 .scrollSliderCardHeight{
   height: calc(100% - 287px);
 }
+.transformation-img-section{
+&::after{
+  content: '';
+  position: absolute;
+  background-image: url('/public/assets/img/transformation_img_bg.svg');
+  
+}
+}
+.marquee-card{
+  background-color: #fff;
+  border: 1px solid #D9D9D9;
+  border-radius: 8px;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    cursor: pointer;
+  cursor: pointer;
+  img{
+    border-radius: 8px;
+    width: 70%;
+  }
+}
