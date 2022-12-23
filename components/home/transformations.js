@@ -20,7 +20,7 @@ export default function transformations() {
                 <button className='text-center justify-center items-center font-bold lg:text-base text-base text-white bg-brand h-[50px] flex shadow-red-btn-shadow hover:bg-brandhover mt-10 px-[20px] py-[15px] mr-1'>
                   <img src="/assets/img/pdf.svg" class="img-fluid mr-2 w-[9%]" alt="" /> Download Full Case Study
                 </button>
-                <button className='text-center justify-center border-2 border-brand items-center font-bold lg:text-base text-brandhover  h-[50px] flex shadow-red-btn-shadow hover:bg-brand hover:text-white  mt-10 px-[20px] py-[15px]'>
+                <button className='text-center justify-center border-2 border-brand items-center font-bold lg:text-base text-brand  h-[50px] flex shadow-red-btn-shadow hover:bg-brand hover:text-white  mt-10 px-[20px] py-[15px]'>
                   Read More Success Stories
                 </button>
               </div>

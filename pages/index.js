@@ -24,43 +24,8 @@ import ScrollSlider2 from '../components/home/scrollSlider2';
 
 export default function Home({children}) {
   const {ref, inView} = useInView();
-const animatethissection = useAnimation();
-// const [scrollPos, getscrollPos] = useState(0);
-// const inputRef = useRef(null);
 
-useEffect(() => {
-  // let scalePos = document.getElementById('scale-section');
-  // console.log(scalePos.offsetTop)
-  // getscrollPos(scalePos.offsetTop)
-  if(inView){
-    animatethissection.start({
-      opacity: 1,
-      // delay:0,
-      scale:1,
-      duration:1,
-      transition:{
-        ease:'easeIn',
-      }
-     
-    })
-   
-  }
-  if(!inView){
-    animatethissection.start({
-      opacity: 0,
-      // delay:0,
-      scale:1.4,
-      transition:{
-        ease:'easeOut',
-        
-      }
-     
-    })
-  
-  }
- 
-  
-}, [inView]);
+
 
   return (
     <div>
@@ -79,35 +44,8 @@ useEffect(() => {
             <WhoWeAre />   
             {/* {props.children} */}
             <Findmore />
-            <Controller>
-              <Scene
-                triggerHook="onLeave"
-                duration="100%"
-                pin
-              >
-                <Timeline
-                  wrapper={<div id="pinContainer"  />}
-                >
-                  
-                    <Scrollparallex /> 
-                   
-                  <Tween
-                    from={{ x: '100%' }}
-                    to={{ x: '0%' }}
-                    
-                  >
-                    <section>
-                    
-                    </section>
-                  </Tween>
-                 
-                </Timeline>
-              </Scene>
-            </Controller>
-            
+            <Scrollparallex /> 
             <Counters />
-            
-
             <B2B />
             {/* <ScrollSlider/> */}
             <ScrollSlider2/>
