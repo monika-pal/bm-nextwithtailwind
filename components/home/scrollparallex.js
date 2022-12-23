@@ -11,6 +11,9 @@ import { useInView } from 'react-intersection-observer';
 
  const Scrollparallex=()=> {
   
+ 
+  
+  
   const {ref, inView} = useInView();
   const animateKiteTop = useAnimation();
   const animateKiteMiddle = useAnimation();
@@ -22,49 +25,65 @@ import { useInView } from 'react-intersection-observer';
       animateKiteTop.start({
         opacity: 0.75,
         y:-69,
-        delay:3000
+        transition:{
+          duration:0.5,
+        }
+        
       })
       animateKiteMiddle.start({
         opacity: 0.75,
         y:0,
-        delay:3000
+        transition:{
+          duration:0.5,
+        }
       })
       animateKiteBottom.start({
         opacity: 0.75,
         y:67,
-        delay:3000
+        transition:{
+          duration:0.5,
+        }
       })
       animateLeftMImage.start({
         opacity: 1,
-          delay:5000,
           transition:{
             ease:'easeIn',
+            duration:0.4
           }
       })
+     
     }
     if(!inView){
       animateKiteTop.start({
         opacity: 0,
         y:1,
-        delay:3000
+        transition:{
+          duration:0.5,
+        }
       })
       animateKiteMiddle.start({
         opacity: 0,
         y:0,
-        delay:3000
+        transition:{
+          duration:0.5,
+        }
       })
       animateKiteBottom.start({
         opacity: 0,
         y:2,
-        delay:3000
+        transition:{
+          duration:0.5,
+        }
       })
       animateLeftMImage.start({
         opacity: 0,
           delay:5000,
           transition:{
             ease:'easeOut',
+            duration:0.4
           }
       })
+     
     }
    
    
@@ -73,15 +92,13 @@ import { useInView } from 'react-intersection-observer';
   
  
     return (
-    
-    <div className="relative">
       
-            
-            <section  className="w-[100%] relative">
-          <div className="py-sp-big">
+           
+          <section className="w-[100%] relative">
+            <div className="py-sp-big">
                 <div className='container-none md:container lg:container mx-auto py-5 px-3'>
                     <div className='flex items-center'>
-                        <div className='w-[25%]'>
+                        <div className='w-[25%]' >
                             <h3 className='lg:text-xl text-lg text-brand font-medium mb-2'>What we do</h3>
                             <p className='lg:text-textxl text-lg text-secondary mb-5 lg:leading-[45px] leading-[40px]'>Transforming businesses with tech-enabled procurement & improving supply chain with customized manufacturing supplies, Moglix drives efficiency all around you.</p>
                             <button className='w-[230px] text-center justify-center items-center font-bold lg:text-base2 text-base text-white bg-brand h-[50px] flex shadow-[0 5px 10px rgba(217, 35, 45, 0.24)] hover:bg-brandhover'><span className='mr-1'>Know More</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path fill="white" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg></button>
@@ -131,7 +148,7 @@ import { useInView } from 'react-intersection-observer';
                                             <li className='lg:text-base2 text-base font-regular'>Custom Fabrication</li>
                                          </ul>
                             </div>
-                            <div className='border border-[#F8BD1E] p-3 rounded-[12px] shadow-[0 30px rgba(209, 227, 255, 0.6)] mb-2'>
+                            <div  className='border border-[#F8BD1E] p-3 rounded-[12px] shadow-[0 30px rgba(209, 227, 255, 0.6)] mb-2'>
                                     <h4 className='text-secondary text-lg font-semibold flex justify-between flex-wrap mb-0'>
                                          <span>Brand Solutions</span>
                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path fill="#D9232D" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
@@ -143,7 +160,7 @@ import { useInView } from 'react-intersection-observer';
                                             <li className='lg:text-base2 text-base font-regular'>Distribution as a Service </li>
                                          </ul>
                             </div>
-                            <div className='border border-[#43AA8B] p-3 rounded-[12px] shadow-[0 30px rgba(209, 227, 255, 0.6)] mb-2'>
+                            <div ref={ref} className='border border-[#43AA8B] p-3 rounded-[12px] shadow-[0 30px rgba(209, 227, 255, 0.6)] mb-2'>
                                     <h4 className='text-secondary text-lg font-semibold flex justify-between flex-wrap mb-0'>
                                          <span>Procurement Optimisation</span>
                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path fill="#D9232D" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
@@ -162,11 +179,9 @@ import { useInView } from 'react-intersection-observer';
             </div>
           </section>
       
-        <div className="section" ref={ref} />
-    
-         
         
-  </div>
+        
+   
      
     )
   

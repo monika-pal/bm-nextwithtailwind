@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Head from 'next/head'
 import Header from '../layout/header';
 import Homebanner from '../components/home/homebanner';
@@ -6,16 +7,63 @@ import Scrollparallex from '../components/home/scrollparallex';
 import Findmore from '../components/home/findmore';
 import Counters from '../components/home/counters';
 import B2B from '../components/home/b2b';
+import styles from '../styles/Home.module.scss';
+import { useInView } from 'react-intersection-observer';
+
+
+import { Controller, Scene } from 'react-scrollmagic';
+import { Tween, Timeline } from 'react-gsap';
 
 import ScrollSlider from '../components/home/scrollSlider';
 import { ParallaxProvider } from 'react-scroll-parallax';
 // import { motion, useAnimation } from "framer-motion";
 // import { styles } from '../styles/Home.module.scss';
 import AwardsMarquee  from '../components/home/awardsMarquee';
+import {motion,useAnimation} from 'framer-motion';
+
 
 
 
 export default function Home({children}) {
+  const {ref, inView} = useInView();
+const animatethissection = useAnimation();
+// const [scrollPos, getscrollPos] = useState(0);
+// const inputRef = useRef(null);
+
+useEffect(() => {
+  // let scalePos = document.getElementById('scale-section');
+  // console.log(scalePos.offsetTop)
+  // getscrollPos(scalePos.offsetTop)
+  if(inView){
+    animatethissection.start({
+      opacity: 1,
+      // delay:0,
+      scale:1,
+      duration:1,
+      transition:{
+        ease:'easeIn',
+      }
+     
+    })
+   
+  }
+  if(!inView){
+    animatethissection.start({
+      opacity: 0,
+      // delay:0,
+      scale:1.4,
+      transition:{
+        ease:'easeOut',
+        
+      }
+     
+    })
+  
+  }
+ 
+  
+}, [inView]);
+
   return (
     <div>
       <Head>
@@ -33,8 +81,37 @@ export default function Home({children}) {
             <WhoWeAre />   
             {/* {props.children} */}
             <Findmore />
-            <Scrollparallex /> 
+            <Controller>
+              <Scene
+                triggerHook="onLeave"
+                duration="100%"
+                pin
+              >
+                <Timeline
+                  wrapper={<div id="pinContainer"  />}
+                >
+                  {/* <motion.section animate={animatethissection} className={[styles.panel,styles.blue, styles.animatesection].join(' ')}><span>Panel 1</span>
+        
+                  </motion.section> */}
+                  
+                    <Scrollparallex /> 
+                   
+                  <Tween
+                    from={{ x: '100%' }}
+                    to={{ x: '0%' }}
+                    
+                  >
+                    <section>
+                    
+                    </section>
+                  </Tween>
+                 
+                </Timeline>
+              </Scene>
+            </Controller>
+            
             <Counters />
+            
 
             <B2B />
             <ScrollSlider/>
