@@ -19,10 +19,8 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 // import { motion, useAnimation } from "framer-motion";
 // import { styles } from '../styles/Home.module.scss';
 import AwardsMarquee  from '../components/home/awardsMarquee';
-import {motion,useAnimation} from 'framer-motion';
-
-
-
+import Transformations from '../components/home/transformations';
+import ScrollSlider2 from '../components/home/scrollSlider2';
 
 export default function Home({children}) {
   const {ref, inView} = useInView();
@@ -90,9 +88,6 @@ useEffect(() => {
                 <Timeline
                   wrapper={<div id="pinContainer"  />}
                 >
-                  {/* <motion.section animate={animatethissection} className={[styles.panel,styles.blue, styles.animatesection].join(' ')}><span>Panel 1</span>
-        
-                  </motion.section> */}
                   
                     <Scrollparallex /> 
                    
@@ -114,11 +109,12 @@ useEffect(() => {
             
 
             <B2B />
-            <ScrollSlider/>
+            {/* <ScrollSlider/> */}
+            <ScrollSlider2/>
             </ParallaxProvider>
               <AwardsMarquee/>
-            
-                   
+            <Transformations/>
+
         </section>
        </main>
       </div>
