@@ -6,6 +6,12 @@
 @tailwind components;
 @tailwind utilities;
 
+$black: #141414;
+$yellowGreen: yellowgreen;
+$yellow: yellow;
+$royalblue: royalblue;
+$magenta: magenta;
+
 
 @layer base {
   html {
@@ -470,3 +476,20 @@ height: 10px;
     width: 70%;
   }
 }
+
+.test {
+  transition: width 0.3s ease-out;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 0 !important;
+  
+  &.yellow {
+    background-color: yellow;
+  }
+}
+.zap {
+  width: 100%;
+}
+
+

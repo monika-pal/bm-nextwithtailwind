@@ -13,7 +13,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 // import { styles } from '../styles/Home.module.scss';
 import AwardsMarquee  from '../components/home/awardsMarquee';
 import Transformations from '../components/home/transformations';
-
+import ScrollSlider2 from '../components/home/scrollSlider2';
 
 export default function Home({children}) {
   return (
@@ -37,11 +37,12 @@ export default function Home({children}) {
             <Counters />
 
             <B2B />
-            <ScrollSlider/>
+            {/* <ScrollSlider/> */}
+            <ScrollSlider2/>
             </ParallaxProvider>
               <AwardsMarquee/>
             <Transformations/>
-                   
+
         </section>
        </main>
       </div>
