@@ -1,13 +1,15 @@
 import React, { Component, useEffect, } from 'react';
 import { useState } from 'react';
 import $ from 'jquery';
+import Typed from 'react-typed';
+
 var document = require("global/document")
 var window = require("global/window")
 
 
 const Homebanner = () => {
   useEffect(() => {
-    $(document).ready(function() {
+    $(document).ready(function () {
       var $item = 0,
         $itemNo = $(".hero figure").length;
       function transitionSlide() {
@@ -20,19 +22,18 @@ const Homebanner = () => {
           .eq($item)
           .addClass("on");
       }
-       var $autoTransition = setInterval(transitionSlide, 3500);
-    
-      $(".hero figure").hover(function() {
-         clearInterval($autoTransition);
+      var $autoTransition = setInterval(transitionSlide, 3500);
+      $(".hero figure").hover(function () {
+        clearInterval($autoTransition);
         $item = $(this).index();
         $(".hero figure").removeClass("on");
         $(".hero figure")
           .eq($item)
           .addClass("on");
-         $autoTransition = setInterval(transitionSlide, 3500);
+        $autoTransition = setInterval(transitionSlide, 3500);
       });
     });
-    
+
 
 
   }, []);
@@ -77,13 +78,39 @@ const Homebanner = () => {
                   <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-2">
                     <svg className="h-3 w-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z" /></svg>
                   </div>
-                  <input
-                    type="email"
+                  {/* <Typed
+   
+                    loop={true}
+                    loopCount={0}
+                    typeSpeed={50}
+                    startDelay={0}
+                    backSpeed={20}
+                    backDelay={1}
+                    strings={["Add something here","ankit","shubham"]}
+                    stopped={null}
+                    smartBackspace
+                    shuffle={false}
+                    fadeOut={false}
+                    fadeOutDelay={1000}
+                    attr="placeholder"
+                    bindInputFocusEvents={false}
+                  >
+                   <input
+                    type="text"
                     name="email"
                     id="email"
                     value=''
                     className="block w-full rounded-none border border-grey-border pl-10 focus:outline-none focus:none sm:text-sm"
-                    placeholder="procure to pay solutions"
+                    
+                  />
+                  </Typed> */}
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                   
+                    className="block w-full rounded-none border border-grey-border pl-10 focus:outline-none focus:none sm:text-sm"
+                    
                   />
                 </div>
                 <button
@@ -100,7 +127,7 @@ const Homebanner = () => {
             <div id="hero">
               <div class="hero">
                 <figure class="on">
-                  <img src="/assets/img/banner1.png"/>
+                  <img src="/assets/img/banner1.png" />
                   <div>
                     <h2>The road to sustainable & efficient supply chain starts here.</h2>
                     <p>From procurement to financing, your partner in solving toughest of supply chain problems.</p>
@@ -108,7 +135,7 @@ const Homebanner = () => {
                   <p className="verticle-heading">Work with us</p>
                 </figure>
                 <figure>
-                <img src="/assets/img/banner2.png"/>
+                  <img src="/assets/img/banner2.png" />
                   <div>
                     <h2>Heading 2</h2>
                     <p>Hella wayfarers messenger bag normcore readymade slow-carb quinoa tumeric fixie ramps.</p>
@@ -116,7 +143,7 @@ const Homebanner = () => {
                   <p className="verticle-heading">Moglix in news</p>
                 </figure>
                 <figure>
-                <img src="/assets/img/banner3.png"/>
+                  <img src="/assets/img/banner3.png" />
                   <div>
                     <h2>Heading 3</h2>
                     <p>Hella wayfarers messenger bag normcore readymade slow-carb quinoa tumeric fixie ramps.</p>

@@ -448,8 +448,11 @@ height: 10px;
   margin: 10px;
 }
 }
+.scrollSliderSectionHeight{
+  height: calc(100vh - 140px);
+}
 .scrollSliderCardHeight{
-  height: calc(100% - 287px);
+  height: 436px;
 }
 .transformation-img-section{
 &::after{
