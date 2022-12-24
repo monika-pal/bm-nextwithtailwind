@@ -10,26 +10,36 @@ var window = require("global/window")
 const Homebanner = () => {
   useEffect(() => {
     $(document).ready(function () {
-      var $item = 0,
-        $itemNo = $(".hero figure").length;
+     
+      var $item = 0;
+      var $prevState = -1;
+      var $itemNo = $(".hero figure").length;
       function transitionSlide() {
-        $item++;
+        if($itemNo - 1 > $prevState ){
+          $item++;
+          $prevState += 1;
+        }else{
+          $item--;
+          $prevState = -1;
+        }
         if ($item > $itemNo - 1) {
-          $item = 0;
+          $item -= $itemNo - 1;
         }
         $(".hero figure").removeClass("on");
-        $(".hero figure")
-          .eq($item)
-          .addClass("on");
+        $(".hero figure").eq($item).addClass("on");
       }
       var $autoTransition = setInterval(transitionSlide, 3500);
       $(".hero figure").hover(function () {
         clearInterval($autoTransition);
-        $item = $(this).index();
+       var $item = $(this).index();
+        //   $item = 0;
+        // $prevState = -1;
         $(".hero figure").removeClass("on");
-        $(".hero figure")
-          .eq($item)
-          .addClass("on");
+        $(".hero figure").eq($item).addClass("on");
+
+      });
+      $(".hero figure").mouseleave(function(){ 
+        clearInterval($autoTransition);
         $autoTransition = setInterval(transitionSlide, 3500);
       });
     });
