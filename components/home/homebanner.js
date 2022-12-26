@@ -28,9 +28,9 @@ const Homebanner = () => {
         $(".hero figure").removeClass("on");
         $(".hero figure").eq($item).addClass("on");
       }
-      var $autoTransition = setInterval(transitionSlide, 3500);
+       var $autoTransition = setInterval(transitionSlide, 3500);
       $(".hero figure").hover(function () {
-        clearInterval($autoTransition);
+         clearInterval($autoTransition);
        var $item = $(this).index();
         //   $item = 0;
         // $prevState = -1;
@@ -39,8 +39,8 @@ const Homebanner = () => {
 
       });
       $(".hero figure").mouseleave(function(){ 
-        clearInterval($autoTransition);
-        $autoTransition = setInterval(transitionSlide, 3500);
+         clearInterval($autoTransition);
+         $autoTransition = setInterval(transitionSlide, 3500);
       });
     });
 

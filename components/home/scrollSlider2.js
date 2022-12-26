@@ -2,7 +2,7 @@ import React, { useRef, useState, useLayoutEffect, useCallback, } from "react"
 import styled from 'styled-components';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
-
+var document = require("global/document")
 const ScrollSliderContent = [
     {
         id: 1,
@@ -40,11 +40,13 @@ const ScrollSliderContent = [
         PostURl: '#'
     },
 ];
+
 export default function scrollSlider2() {
-
-
-    return (
-
+    const widthOffsetLeft = document.body.scrollWidth * 0.2 / 2;
+    const widthOffsetRight = 575;
+       console.log(widthOffsetRight)
+    return ( 
+ 
         <div>
             <Controller>
                 <Scene triggerHook="onLeave" duration={2000} pin >
@@ -56,14 +58,14 @@ export default function scrollSlider2() {
                             </div>
                             <div>
                             </div>
-                            <div className="relative pt-1 flex justify-center mx-5">
+                            <div className="relative pt-1 flex justify-center">
                                 <div className="mt-2 w-[80%]" aria-hidden="true">
                                     <div className="overflow-hidden h-[12px] mb-2 text-xs flex rounded-[10px] bg-gray-light">
-                                        <div className='flex transition-all  ease-in-out duration-1000 ' style={{ width: '100%', transformOrigin: 'left', transform: `scaleX(${progress})` }}>
-                                            <div style={{ width: '40%' }} className=" shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor1 transition-all ease-in-out duration-1000 "></div>
-                                            <div style={{ width: '20%' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor2 transition-all ease-in-out duration-1000 "></div>
-                                            <div style={{ width: '20%' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor3 transition-all ease-in-out duration-1000 "></div>
-                                            <div style={{ width: '20%' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor4 transition-all ease-in-out duration-1000 rounded-tr-[10px] rounded-br-[10px]"></div>
+                                        <div className='flex transition-all  ease duration-1000 ' style={{ width: '100%', transformOrigin: 'left', transform: `scaleX(${progress})` }}>
+                                            <div style={{ width: '40%' }} className=" shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor1 transition-all ease-in-out duration-100 "></div>
+                                            <div style={{ width: '20%' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor2 transition-all ease-in-out duration-100 "></div>
+                                            <div style={{ width: '20%' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor3 transition-all ease-in-out duration-100 "></div>
+                                            <div style={{ width: '20%' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor4 transition-all ease-in-out duration-100 rounded-tr-[10px] rounded-br-[10px]"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -100,8 +102,8 @@ export default function scrollSlider2() {
                                     >
 
                                         <Tween
-                                            to={{ x: '-150%' }}
-                                            from={{ x: '150%' }}
+                                            to={{ x: `-${widthOffsetRight}px`  }}
+                                            from={{ x: `${widthOffsetLeft}px` }}
                                         />
 
                                     </Timeline>
