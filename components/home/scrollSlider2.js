@@ -42,13 +42,15 @@ const ScrollSliderContent = [
 
 export default function scrollSlider2() {
     const widthOffsetLeft = document.body.scrollWidth * 0.2 / 2;
-    const widthOffsetRight = 575;
+    console.log(widthOffsetLeft)
+    //(card width 340 x card no 5) + (margin-right 25 x card no 5) + 100 = 1700 + 125 + 100 = 1925
+    const widthOffsetRight = 1925 -  document.body.scrollWidth ;
        console.log(widthOffsetRight)
     return ( 
  
         <div>
             <Controller>
-                <Scene triggerHook="onLeave" duration={3000} pin >
+                <Scene triggerHook="onLeave" duration={1000} pin >
                     {(progress) => (
                         <section className='bg-graybg py-3 overflow-hidden h-[120vh] lg:h-[100vh] flex flex-col '>
                             <div className="container-none md:container lg:container mx-auto px-3">
@@ -60,7 +62,7 @@ export default function scrollSlider2() {
                             <div className="relative pt-1 flex justify-center">
                                 <div className="mt-2 w-[80%]" aria-hidden="true">
                                     <div className="overflow-hidden h-[12px] mb-2 text-xs flex rounded-[10px] bg-gray-light">
-                                        <div className='flex transition-all  ease duration-1000 ' style={{ width: '100%', transformOrigin: 'left', transform: `scaleX(${progress})` }}>
+                                        <div className='flex transition-all  ease duration-100' style={{ width: '100%', transformOrigin: 'left', transform: `scaleX(${progress})` }}>
                                             <div style={{ width: '40%' }} className=" shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor1 transition-all ease-in-out duration-100 "></div>
                                             <div style={{ width: '20%' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor2 transition-all ease-in-out duration-100 "></div>
                                             <div style={{ width: '20%' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor3 transition-all ease-in-out duration-100 "></div>
@@ -108,6 +110,10 @@ export default function scrollSlider2() {
                                     </Timeline>
                                 </Timeline>
                             </div>
+                             <div className="w-[100%] mt-4 lg:mt-[5%] flex justify-center">
+                             <button className='w-[230px] text-center justify-center items-center font-bold lg:text-base2 text-base text-white bg-brand h-[50px] flex shadow-[0 5px 10px rgba(217, 35, 45, 0.24)] hover:bg-brandhover'><span className='mr-1'>Know More</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path fill="white" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg></button>
+                             </div>
+                           
                         </section>
                     )}
                 </Scene>
