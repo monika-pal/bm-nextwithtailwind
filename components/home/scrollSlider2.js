@@ -44,7 +44,7 @@ export default function scrollSlider2() {
 
     return (
 
-        <div>
+        <div className="z-[1] relative">
             <Controller>
                 <Scene triggerHook="onLeave" duration={2000} pin >
                     {(progress) => (

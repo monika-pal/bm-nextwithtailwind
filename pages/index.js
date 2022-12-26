@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Head from 'next/head'
 import Header from '../layout/header';
 import Homebanner from '../components/home/homebanner';
@@ -10,20 +10,19 @@ import B2B from '../components/home/b2b';
 import styles from '../styles/Home.module.scss';
 import { useInView } from 'react-intersection-observer';
 
-
-import { Controller, Scene } from 'react-scrollmagic';
-import { Tween, Timeline } from 'react-gsap';
-
-import ScrollSlider from '../components/home/scrollSlider';
 import { ParallaxProvider } from 'react-scroll-parallax';
 // import { motion, useAnimation } from "framer-motion";
 // import { styles } from '../styles/Home.module.scss';
 import AwardsMarquee  from '../components/home/awardsMarquee';
 import Transformations from '../components/home/transformations';
 import ScrollSlider2 from '../components/home/scrollSlider2';
+import { motion } from "framer-motion";
+import { useFollowPointer } from "../components/shared/use-follow-pointers";
 
 export default function Home({children}) {
-  const {ref, inView} = useInView();
+  const ref = useRef(null);
+
+  const { x, y } = useFollowPointer(ref);
 
 
 
@@ -37,7 +36,9 @@ export default function Home({children}) {
         <link rel="stylesheet=" href='/node_modules/accordion-slider/dist/js/jquery.accordionSlider.js' />
       </Head>
      <div className='bm_pagewrapper'>
-       <main>
+    
+       <main >
+       
         <section className='w-100'>
             <Homebanner />
             <ParallaxProvider>
@@ -56,7 +57,17 @@ export default function Home({children}) {
         </section>
        </main>
       </div>
-       
+      <motion.div
+          ref={ref} 
+          className="w-[20px] h-[20px] rounded-[50%] bg-brand fixed z-[99]"
+          animate={{ x, y }}
+          transition={{
+            type: "spring",
+            // damping: 3,
+            // stiffness: 50,
+            // restDelta: 0.001
+          }}
+        />
     </div>
   )
 }

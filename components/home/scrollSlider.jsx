@@ -55,7 +55,7 @@ export default class scrollSlider extends Component {
       },
     ];
     return (
-      <section className='bg-graybg py-sp-big z-[1] relative'>
+      <section className='bg-graybg py-sp-big z-1 relative'>
         <div className="container-none md:container lg:container mx-auto px-3">
         <h2 className='text-heading1 font-bold text-secondary text-center'>Step inside the world of Moglix</h2>
          <h3 className='text-lg font-regular text-secondary text-center'>Don’t miss out on our latest headlines and announcements.</h3>

@@ -267,7 +267,7 @@ const Counters =()=> {
 
                         </motion.div>
                     </div>
-                    <div className='w-[25%] relative'>
+                    <div className='w-[25%] relative' ref={ref}>
                         <motion.div animate={animatecontent} className='mt-[50px]'>
                             <h3 className='text-secondary text-[60px] font-semibold'>
                             <CounterUnit from={15900} to={16000} />+</h3>
@@ -292,7 +292,7 @@ const Counters =()=> {
                     </div>
 
                 </div>
-            <div className='inline-block w-auto'  ref={ref}>
+            <div className='inline-block w-auto'>
                 <div className='bg-[#1F2137] px-1 py-2 '>
                     <span className='border border-white rounded-[1px] py-1 min-w-[50px] text-white px-1 font-bold text-heading2 mx-[0.5px]'>5</span>
                     <span className='border border-white rounded-[1px] py-1 min-w-[50px] text-white px-1 font-bold text-heading2 mx-[0.5px]'>2</span>
