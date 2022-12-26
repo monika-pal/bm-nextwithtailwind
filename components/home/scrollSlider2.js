@@ -1,7 +1,7 @@
 import React, { useRef, useState, useLayoutEffect, useCallback, } from "react"
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
-
+var document = require("global/document")
 const ScrollSliderContent = [
     {
         id: 1,
@@ -39,36 +39,37 @@ const ScrollSliderContent = [
         PostURl: '#'
     },
 ];
+
 export default function scrollSlider2() {
-
-
-    return (
-
-        <div className="z-[1] relative">
+    const widthOffsetLeft = document.body.scrollWidth * 0.2 / 2;
+    const widthOffsetRight = 575;
+       console.log(widthOffsetRight)
+    return ( 
+ 
+        <div>
             <Controller>
                 <Scene triggerHook="onLeave" duration={2000} pin >
                     {(progress) => (
-                        <section className='bg-graybg py-3   overflow-hidden'>
+                        <section className='bg-graybg py-3 overflow-hidden h-[100vh] flex flex-col '>
                             <div className="container-none md:container lg:container mx-auto px-3">
-                                <h2 className='text-heading1 font-bold text-secondary text-center'>Step inside the world of Moglix</h2>
+                                <h2 className='text-xxl lg:text-heading1 font-bold text-secondary text-center'>Step inside the world of Moglix</h2>
                                 <h3 className='text-lg font-regular text-secondary text-center'>Don’t miss out on our latest headlines and announcements.</h3>
                             </div>
                             <div>
                             </div>
-                            <div className="relative pt-1 flex justify-center mx-5">
+                            <div className="relative pt-1 flex justify-center">
                                 <div className="mt-2 w-[80%]" aria-hidden="true">
                                     <div className="overflow-hidden h-[12px] mb-2 text-xs flex rounded-[10px] bg-gray-light">
-                                        <div className='flex transition-all  ease-in-out duration-1000 ' style={{ width: '100%', transformOrigin: 'left', transform: `scaleX(${progress})` }}>
-
-                                            <div style={{ width: '40%' }} className=" shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor1 transition-all ease-in-out duration-1000 "></div>
-                                            <div style={{ width: '20%' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor2 transition-all ease-in-out duration-1000 "></div>
-                                            <div style={{ width: '20%' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor3 transition-all ease-in-out duration-1000 "></div>
-                                            <div style={{ width: '20%' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor4 transition-all ease-in-out duration-1000 rounded-tr-[10px] rounded-br-[10px]"></div>
+                                        <div className='flex transition-all  ease duration-1000 ' style={{ width: '100%', transformOrigin: 'left', transform: `scaleX(${progress})` }}>
+                                            <div style={{ width: '40%' }} className=" shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor1 transition-all ease-in-out duration-100 "></div>
+                                            <div style={{ width: '20%' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor2 transition-all ease-in-out duration-100 "></div>
+                                            <div style={{ width: '20%' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor3 transition-all ease-in-out duration-100 "></div>
+                                            <div style={{ width: '20%' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-progressColor4 transition-all ease-in-out duration-100 rounded-tr-[10px] rounded-br-[10px]"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="sticky flex py-3" >
+                            <div className="sticky flex scrollSliderSectionHeight align-middle" >
 
                                 <Timeline totalProgress={progress} paused>
                                     <Timeline
@@ -76,11 +77,11 @@ export default function scrollSlider2() {
                                             <>
                                                 {ScrollSliderContent.map((ScrollSliderPostData) =>
 
-                                                    <div className="flex mr-4">
-                                                        <div className='min-h-[440px]  bg-white' key={ScrollSliderPostData.id}>
-                                                            <a className='block h-[440px] w-[340px]' href="#">
+                                                    <div className="flex mr-4 scrollSliderCardHeight">
+                                                        <div className=' bg-white' key={ScrollSliderPostData.id}>
+                                                            <a className='block w-[340px]' href="#">
                                                                 <img src={ScrollSliderPostData.PostImg} alt="" />
-                                                                <div className='scrollSliderCardHeight p-[30px]'>
+                                                                <div className=' p-[30px]'>
                                                                     <span className='text-date-grey text-sm mb-1'>{ScrollSliderPostData.PostDate}</span>
                                                                     <p className='text-base2 font-semibold '>{ScrollSliderPostData.PostHeading}
                                                                     </p>
@@ -100,8 +101,8 @@ export default function scrollSlider2() {
                                     >
 
                                         <Tween
-                                            to={{ x: '-150%' }}
-                                            from={{ x: '150%' }}
+                                            to={{ x: `-${widthOffsetRight}px`  }}
+                                            from={{ x: `${widthOffsetLeft}px` }}
                                         />
 
                                     </Timeline>
