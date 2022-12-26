@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Head from 'next/head'
 import Header from '../layout/header';
 import Homebanner from '../components/home/homebanner';
@@ -6,6 +7,12 @@ import Scrollparallex from '../components/home/scrollparallex';
 import Findmore from '../components/home/findmore';
 import Counters from '../components/home/counters';
 import B2B from '../components/home/b2b';
+import styles from '../styles/Home.module.scss';
+import { useInView } from 'react-intersection-observer';
+
+
+import { Controller, Scene } from 'react-scrollmagic';
+import { Tween, Timeline } from 'react-gsap';
 
 import ScrollSlider from '../components/home/scrollSlider';
 import { ParallaxProvider } from 'react-scroll-parallax';
@@ -16,6 +23,10 @@ import Transformations from '../components/home/transformations';
 import ScrollSlider2 from '../components/home/scrollSlider2';
 
 export default function Home({children}) {
+  const {ref, inView} = useInView();
+
+
+
   return (
     <div>
       <Head>
@@ -35,7 +46,6 @@ export default function Home({children}) {
             <Findmore />
             <Scrollparallex /> 
             <Counters />
-
             <B2B />
             {/* <ScrollSlider/> */}
             <ScrollSlider2/>

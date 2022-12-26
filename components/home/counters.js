@@ -240,7 +240,7 @@ const Counters =()=> {
     }, [inView]);
   
     return (
-      <section  className='py-sp-big overflow-x-hidden'>
+      <section  className='py-sp-big overflow-x-hidden bg-[url("/assets/img/dotted_background.jpg")] bg-no-repeat bg-cover'>
             <div className='container-none md:container lg:container mx-auto py-5 px-3 text-center'>
                 <h2 className='text-heading1 font-bold text-secondary text-center'>The numbers behind the <br/>strength of Moglix’s solutions</h2>
                 <div className='h-[430px] flex w-full relative pt-[80px]'>
@@ -292,7 +292,7 @@ const Counters =()=> {
                     </div>
 
                 </div>
-            <div className='inline-block w-auto'>
+            <div className='inline-block w-auto'  ref={ref}>
                 <div className='bg-[#1F2137] px-1 py-2 '>
                     <span className='border border-white rounded-[1px] py-1 min-w-[50px] text-white px-1 font-bold text-heading2 mx-[0.5px]'>5</span>
                     <span className='border border-white rounded-[1px] py-1 min-w-[50px] text-white px-1 font-bold text-heading2 mx-[0.5px]'>2</span>
@@ -307,7 +307,7 @@ const Counters =()=> {
                  </div>
             </div>
             
-            <br  ref={ref}/>
+            {/* <br /> */}
       </section>
     )
   

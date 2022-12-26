@@ -1,5 +1,4 @@
 import React, { useRef, useState, useLayoutEffect, useCallback, } from "react"
-import styled from 'styled-components';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
 var document = require("global/document")

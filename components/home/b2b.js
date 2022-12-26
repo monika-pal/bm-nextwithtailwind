@@ -35,6 +35,7 @@ const B2B =()=> {
       getscrollPos(scalePos.offsetTop)
         animatepara.start({
             x:10,
+            opacity:1,
           transition:{
             type: "spring",
             // bounce: 0.4,
@@ -49,7 +50,8 @@ const B2B =()=> {
       }
       if(!inView){
         animatepara.start({
-            x:500,
+            x:200,
+            opacity:0,
             transition: {
                 type: "spring",
                 // bounce: 0.4,
@@ -69,7 +71,7 @@ const B2B =()=> {
     return (
       <div ref={refSCROLL} className="mb-[-40px]">
       <Parallax id="scale-section" startScroll={scrollPos - 300} endScroll={scrollPos} className='z-[1] relative bg-[url("/assets/img/block_background.png")] py-0 bg-no-repeat bg-contain' >
-        <Parallax speed={10} >
+        <Parallax speed={15} >
           
               <div class="container-none md:container left-0 right-0 lg:container mx-auto py-5 px-3 text-center absolute top-0 bottom-0">
                 <motion.div className={[styles.dashedLine,styles.dashedLine1].join(' ')} style={{ scaleY:scrollYProgress }}> </motion.div>
