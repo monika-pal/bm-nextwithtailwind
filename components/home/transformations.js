@@ -26,8 +26,8 @@ export default function transformations() {
               </div>
             </div>
             <div className='w-1/2 px-[20px]'>
-              <div className="relative transformation-img-section">
-              <img src="/assets/img/transformation.png"  alt=""/>
+              <div className="relative transformation-img-section before:bg-[url('/assets/img/transformation.png')] before:bg-no-repeat before:bg-contain pl-[80px] pb-[80px] before:left-0 before:bottom-3 before:absolute before:top-0 before:right-0 before:z-0">
+                  <img src="/assets/img/transformationimage.png" className='z-1 relative'  alt=""/>
               </div>
             </div>
           </div>

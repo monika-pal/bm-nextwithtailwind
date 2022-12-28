@@ -3,12 +3,10 @@ import Head from 'next/head'
 import Header from '../layout/header';
 import Homebanner from '../components/home/homebanner';
 import WhoWeAre from '../components/home/whoWeAre';
-import Scrollparallex from '../components/home/scrollparallex';
+import WhatWeDo from '../components/home/whatwedo';
 import Findmore from '../components/home/findmore';
 import Counters from '../components/home/counters';
 import B2B from '../components/home/b2b';
-import styles from '../styles/Home.module.scss';
-import { useInView } from 'react-intersection-observer';
 
 import { ParallaxProvider } from 'react-scroll-parallax';
 // import { motion, useAnimation } from "framer-motion";
@@ -16,13 +14,8 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import AwardsMarquee  from '../components/home/awardsMarquee';
 import Transformations from '../components/home/transformations';
 import ScrollSlider2 from '../components/home/scrollSlider2';
-import { motion } from "framer-motion";
-import { useFollowPointer } from "../components/shared/use-follow-pointers";
 
 export default function Home({children}) {
-  const ref = useRef(null);
-
-  const { x, y } = useFollowPointer(ref);
 
 
 
@@ -37,7 +30,7 @@ export default function Home({children}) {
       </Head>
      <div className='bm_pagewrapper'>
     
-       <main >
+       <main>
        
         <section className='w-100'>
             <Homebanner />
@@ -45,7 +38,7 @@ export default function Home({children}) {
             <WhoWeAre />   
             {/* {props.children} */}
             <Findmore />
-            <Scrollparallex /> 
+            <WhatWeDo /> 
             <Counters />
             <B2B />
             {/* <ScrollSlider/> */}
@@ -57,17 +50,7 @@ export default function Home({children}) {
         </section>
        </main>
       </div>
-      <motion.div
-          ref={ref} 
-          className="w-[20px] h-[20px] rounded-[50%] bg-brand fixed z-[99]"
-          animate={{ x, y }}
-          transition={{
-            type: "spring",
-            // damping: 3,
-            // stiffness: 50,
-            // restDelta: 0.001
-          }}
-        />
+      
     </div>
   )
 }

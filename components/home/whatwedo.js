@@ -9,7 +9,7 @@ import { useInView } from 'react-intersection-observer';
 
 
 
- const Scrollparallex=()=> {
+ const WhatWeDo=()=> {
   
  
   
@@ -143,9 +143,9 @@ import { useInView } from 'react-intersection-observer';
                                          
                                     </h4>
                                     <ul className='pl-1'>
-                                            <li className='lg:text-base2 text-base font-regular'>MRO Optimisation</li>
-                                            <li className='lg:text-base2 text-base font-regular'>Packaging Solutions</li>
-                                            <li className='lg:text-base2 text-base font-regular'>Custom Fabrication</li>
+                                            <li className='text-base font-regular'>MRO Optimisation</li>
+                                            <li className=' text-base font-regular'>Packaging Solutions</li>
+                                            <li className=' text-base font-regular'>Custom Fabrication</li>
                                          </ul>
                             </div>
                             <div  className='border border-[#F8BD1E] p-3 rounded-[12px] shadow-[0 30px rgba(209, 227, 255, 0.6)] mb-2'>
@@ -155,9 +155,9 @@ import { useInView } from 'react-intersection-observer';
                                          
                                     </h4>
                                     <ul className='pl-1'>
-                                            <li className='lg:text-base2 text-base font-regular'>Moglix.com store</li>
-                                            <li className='lg:text-base2 text-base font-regular'>Custom Digital Platform</li>
-                                            <li className='lg:text-base2 text-base font-regular'>Distribution as a Service </li>
+                                            <li className='text-base font-regular'>Moglix.com store</li>
+                                            <li className='text-base font-regular'>Custom Digital Platform</li>
+                                            <li className=' text-base font-regular'>Distribution as a Service </li>
                                          </ul>
                             </div>
                             <div ref={ref} className='border border-[#43AA8B] p-3 rounded-[12px] shadow-[0 30px rgba(209, 227, 255, 0.6)] mb-2'>
@@ -167,9 +167,9 @@ import { useInView } from 'react-intersection-observer';
                                          
                                     </h4>
                                     <ul className='pl-1'>
-                                            <li className='lg:text-base2 text-base font-regular'>Financing Solutions</li>
-                                            <li className='lg:text-base2 text-base font-regular'>Supply chain Financing</li>
-                                            <li className='lg:text-base2 text-base font-regular'>Channel Financing</li>
+                                            <li className='text-base font-regular'>Financing Solutions</li>
+                                            <li className=' text-base font-regular'>Supply chain Financing</li>
+                                            <li className=' text-base font-regular'>Channel Financing</li>
                                          </ul>
                             </div>
                         </div>
@@ -187,4 +187,4 @@ import { useInView } from 'react-intersection-observer';
   
 }
 
-export default Scrollparallex;
+export default WhatWeDo;
