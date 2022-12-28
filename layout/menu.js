@@ -1,6 +1,6 @@
 import  Link  from "next/link";
 
-export default function Menu() {
+export default function Menuitem() {
   
     return <ul className="flex items-center ml-8">
         <li className="lg:px-5 px-4 lg:text-base text-sm font-semibold text-secondary ">
