@@ -241,14 +241,14 @@ const Counters =()=> {
   
     return (
       <section  className='py-sp-big overflow-x-hidden bg-[url("/assets/img/dotted_background.jpg")] bg-no-repeat bg-cover'>
-            <div className='container-none md:container lg:container mx-auto py-5 px-3 text-center'>
-                <h2 className='text-heading1 font-bold text-secondary text-center'>The numbers behind the <br/>strength of Moglix’s solutions</h2>
-                <div className='h-[430px] flex w-full relative pt-[80px]'>
+            <div className='container md:container lg:container mx-auto py-5 px-3 text-center md:px-0'>
+                <h2 className='text-heading1 font-bold text-secondary text-center md:text-heading2'>The numbers behind the <br/>strength of Moglix’s solutions</h2>
+                <div className='h-[430px] md:h-[360px] flex w-full relative pt-[80px]'>
                     <div className='w-[25%] relative'>
                         <motion.div animate={animatecontent} className='mt-[110px]'>
-                            <h3 className='text-secondary text-[60px] font-semibold'>
+                            <h3 className='text-secondary text-[60px] font-semibold md:text-xl'>
                             <CounterUnit from={0} to={45} />+</h3>
-                            <span className='text-secondary text-textxl'>Categories</span>
+                            <span className='text-secondary text-textxl md:text-base'>Categories</span>
                         </motion.div>
                         <motion.div animate={animationdot1} className={[styles.counterdotline,styles.counterdotline1].join(' ')}>
                             <motion.span animate={showanimationdot1} className={[styles.counterdot,styles.counterdot1].join(' ')}></motion.span>
@@ -257,9 +257,9 @@ const Counters =()=> {
                     </div>
                     <div className='w-[25%] relative'>
                         <motion.div animate={animatecontent} className='mt-[80px]'>
-                            <h3 className='text-secondary text-[60px] font-semibold'>
+                            <h3 className='text-secondary text-[60px] font-semibold md:text-xl'>
                             <CounterUnit from={100} to={500} />+</h3>
-                            <span className='text-secondary text-textxl'>Enterprises trusts us</span>
+                            <span className='text-secondary text-textxl md:text-base'>Enterprises trusts us</span>
                         </motion.div>
                         <motion.div animate={animationdot2} className={[styles.counterdotline,styles.counterdotline2].join(' ')}>
                             {/* <div className={[styles.counterdotline22]}></div> */}
@@ -269,9 +269,9 @@ const Counters =()=> {
                     </div>
                     <div className='w-[25%] relative' ref={ref}>
                         <motion.div animate={animatecontent} className='mt-[50px]'>
-                            <h3 className='text-secondary text-[60px] font-semibold'>
+                            <h3 className='text-secondary text-[60px] font-semibold md:text-xl'>
                             <CounterUnit from={15900} to={16000} />+</h3>
-                            <span className='text-secondary text-textxl'>Suppliers</span>
+                            <span className='text-secondary text-textxl md:text-base'>Suppliers</span>
                         </motion.div>
                         <motion.div animate={animationdot3} className={[styles.counterdotline,styles.counterdotline3].join(' ')}>
                         <motion.span animate={showanimationdot3} className={[styles.counterdot,styles.counterdot3].join(' ')}></motion.span>
@@ -280,9 +280,9 @@ const Counters =()=> {
                     </div>
                     <div className='w-[25%] relative'>
                         <motion.div animate={animatecontent} className=''>
-                            <h3 className='text-secondary text-[60px] font-semibold'>
+                            <h3 className='text-secondary text-[60px] font-semibold md:text-xl'>
                             <CounterUnit from={400} to={500} />K+</h3>
-                            <span className='text-secondary text-textxl'>SMEs</span>
+                            <span className='text-secondary text-textxl md:text-base'>SMEs</span>
                         </motion.div>
                         <motion.div animate={animationdot4} className={[styles.counterdotline,styles.counterdotline4].join(' ')}>
                             <motion.span animate={showanimationdot4}  className={[styles.counterdot,styles.counterdot4].join(' ')}></motion.span>
@@ -292,7 +292,7 @@ const Counters =()=> {
                     </div>
 
                 </div>
-            <div className='inline-block w-auto'>
+            <div className='inline-block w-auto z-10 relative'>
                 <div className='bg-[#1F2137] px-1 py-2 '>
                     <span className='border border-white rounded-[1px] py-1 min-w-[50px] text-white px-1 font-bold text-heading2 mx-[0.5px]'>5</span>
                     <span className='border border-white rounded-[1px] py-1 min-w-[50px] text-white px-1 font-bold text-heading2 mx-[0.5px]'>2</span>

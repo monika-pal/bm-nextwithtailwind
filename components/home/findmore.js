@@ -77,20 +77,20 @@ const Findmore =()=> {
 
   
     return (
-      <div className=" bg-no-repeat bg-bottom bg-contain">
-      <ParallaxProvider >
+      <section className=" bg-no-repeat bg-bottom bg-contain">
+      <ParallaxProvider>
   
             <Parallax scale={[0.9, 1]} startScroll={scrollPos - 552} endScroll={scrollPos - 113}
-             className="moon bg-no-repeat bg-cover mx-auto px-0 relative h-[100vh]" id="scale-section">
+             className="moon bg-no-repeat bg-cover mx-auto px-0 relative xl:h-[100vh] lg:h-[100vh] md:h-[100vh] md:min-h-[600px] sm:h-[70vh] sm:min-h-[600px]" id="scale-section">
                      
               <video autoPlay loop muted className={styles.videobg}>
                   <source src='/assets/video/pexels-bmvideo.mp4' type="video/mp4"/>  
               </video>
                 
-                <motion.div animate={animateVideobg}  className="border border-white py-[120px] top-[20%] absolute z-1 left-sp-small right-sp-small mx-auto">
+                <motion.div animate={animateVideobg}  className="border border-white sm:py-[50px] md:py-[50px] py-[120px] md:top-[32%]  top-[20%] absolute z-1 left-sp-small right-sp-small mx-auto">
                      <div>
                       <div className='absolute left-0 right-0 top-0 bottom-0 blur-[3px] bg-[rgba(0,0,0,0.5)]'></div>  
-                      <motion.h3 animate={animateText} className='text-heading2 text-center text-white font-bold z-2 mx-auto relative w-[100%] max-w-[700px]'>
+                      <motion.h3 animate={animateText} className='text-heading2 sm:text-textxl sm:px-2 sm:font-medium sm:leading-[38px] text-center text-white font-bold z-2 mx-auto relative w-[100%] max-w-[700px]'>
                           Whether you are a small or mid-sized business or a large corporation, Moglix has a solution for you.​
                       </motion.h3>
                       
@@ -104,7 +104,7 @@ const Findmore =()=> {
             <div className='ds' ref={ref}></div>
       
       </ParallaxProvider>
-      </div>
+      </section>
     )
   
 }
