@@ -53,7 +53,7 @@ export default function scrollSlider2() {
                 <Scene triggerHook="onLeave" duration={1000} pin >
                     {(progress) => (
                         <section className='bg-graybg py-3 overflow-hidden h-[120vh] lg:h-[100vh] flex flex-col '>
-                            <div className="container-none md:container lg:container mx-auto px-3">
+                            <div className="container md:container lg:container mx-auto px-3">
                                 <h2 className='text-xxl lg:text-heading1 font-bold text-secondary text-center'>Step inside the world of Moglix</h2>
                                 <h3 className='text-lg font-regular text-secondary text-center'>Don’t miss out on our latest headlines and announcements.</h3>
                             </div>
