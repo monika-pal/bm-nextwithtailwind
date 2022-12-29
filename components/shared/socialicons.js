@@ -4,7 +4,7 @@ export default class Socialicons extends Component {
   render() {
     return (
       <div>
-        <ul className='flex align-top justify-end'>
+        <ul className='flex align-top justify-end sm:justify-center'>
             <li className='ml-2'>
                 <a className='flex cursor-pointer justify-center items-center lg:w-[50px] lg:h-[50px] w-[35px] h-[35px] bg-black text-white'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className='text-white inline-block' width="22" height="22"><path fill="none" d="M0 0h24v24H0z"/><path fill="white" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>

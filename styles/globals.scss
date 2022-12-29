@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
-@import "~slick-carousel/slick/slick.css"; 
-@import "~slick-carousel/slick/slick-theme.css";
 
 @tailwind base;
 @tailwind components;
@@ -484,29 +482,26 @@ $magenta: magenta;
   position: relative;
   text-align: center;
 }
-.slick-slider {
-overflow: hidden;
-}
+
 .range-slider{
 width: 80%;
 height: 10px;
 
 }
-.slick-slide{
-& > div{
-  margin: 10px;
-}
-}
-.scrollSliderSectionHeight{
-  padding-top: 30px;
-}
+// @media only screen and (max-width: 1024px){
+//   .scrollmagic-pin-spacer{
+//     min-height: auto !important;
+//     height: auto !important;
+//     padding-bottom: unset !important;
+//   }
+// }
 @media only screen and (min-width :1600px){
   .scrollSliderSectionHeight{
     padding-top: 5%;
   }
 }
 .scrollSliderCardHeight{
-  height: 436px;
+  height: 426px;
 }
 .transformation-img-section{
 &::after{

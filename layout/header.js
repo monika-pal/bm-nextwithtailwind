@@ -26,11 +26,14 @@ export default function Header(){
     {({ open }) => (
       <><Topbar />
         <header className="mx-auto bg-[#fff] shadow-normal xl:py-1">
-            <div className="container md:container lg:container mx-auto px-3 md:px-0">
+            <div className="container md:container lg:container mx-auto px-3 md:px-0 sm:px-2">
            
             <div className="flex w-full justify-between lg:py-2 md:py-0">
-              <div className="flex items-center">
+              <div className="flex items-center sm:hidden">
                 <Link className="block" href='/'><img src='/assets/img/business_logo_dark.png' alt="logo" width="180" height="40"/></Link>
+              </div>
+              <div className="flex md:hidden sm:visible lg:hidden items-center">
+                <Link className="block" href='/'><img src='/assets/img/business_logo_dark.png' alt="logo" width="150"/></Link>
               </div>
               <div className="sm:hidden md:hidden flex items-center ">
               <Menuitem />

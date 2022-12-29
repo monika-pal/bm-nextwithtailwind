@@ -1,6 +1,5 @@
 import React, { Component, useEffect, Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react'
-import { CheckIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react';
 import $ from 'jquery';
 import Typed from 'react-typed';
@@ -8,11 +7,6 @@ var document = require("global/document")
 
 
 const Homebanner = () => {
-  const [message, setMessage] = useState('Initial value');
-
-  const handleChange = event => {
-    setMessage(event.target.value);
-  };
   const [open, setOpen] = useState(false)
   useEffect(() => {
     $(document).ready(function () {
@@ -82,56 +76,15 @@ const Homebanner = () => {
   return (
     <div>
       <nav className="container md:container lg:container mx-auto px-3">
-        <div className="flex">
+        <div className="flex flex-col lg:flex-row xl:flex-row">
 
-          <div className="w-1/4 flex items-center ">
-
-            <div className='flex justify-center flex-col'>
-              <h1 className='text-heading1 font-medium mb-[30px]'>
+          <div className="w-full lg:w-1/4 flex items-center pb-3 lg:pb-0">
+            <div className='flex justify-center w-full lg:w-[auto] flex-col '>
+              <h1 className='text-xxl lg:text-heading1 font-medium my-2 lg:my-0 lg:mb-5'>
                 <span className='text-brand'>Grow </span>with <br /> Moglix
               </h1>
               <p className='mb-[15px]'>Learn how we are driving change for <br /> businesses across the spectrum</p>
-              {/* <Typed
-                      loop={true}
-                      loopCount={0}
-                      typeSpeed={75}
-                      startDelay={0}
-                      backSpeed={20}
-                      backDelay={1}
-                      strings={["Value 1 ", "Value 2", "Value 3"]}
-                      stopped={null}
-                      smartBackspace
-                      shuffle={false}
-                      fadeOut={false}
-                      fadeOutDelay={1000}
-                      attr="placeholder"
-                      bindInputFocusEvents={true}
-                    >
-                 
-                    </Typed> */}
-              {/* <div className="mt-1 flex rounded-md w-[380px] z-[10] autoTypeSearch shadow-autoTypeBoxShadow" >
-                <div className="relative items-stretch focus-within:z-10">
-                  <div  className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-2 h-full w-full border border-grey-border">
-                    <svg  className="h-3 w-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z" /></svg>
-          
-                    <input
-                        type="text"
-                        name="email"
-                        id="email"  onChange={handleChange}
-                        value={message} 
-                        className="block rounded-none border border-grey-border pl-2 focus:outline-none focus:none sm:text-lg  "
-                      />
-                  </div>
-                </div>
-                <button
-                  type="button" 
-                  className="relative -ml-px bg-brand inline-flex items-center space-x-2  bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="rgba(255,255,255,1)" /></svg>
-
-                </button>
-              </div> */}
-              <div className="mt-1 flex rounded-md shadow-sm w-[380px] z-[10] autoTypeSearch shadow-autoTypeBoxShadow">
+              <div className="mt-1 flex rounded-md shadow-sm w-full lg:w-[380px] z-[10] autoTypeSearch shadow-autoTypeBoxShadow">
                 <div className="relative flex flex-grow items-stretch focus-within:z-10 border border-grey-border">
                   <div className="pointer-events-none w-[33px] relative inset-y-0 left-0 flex items-center pl-2 h-full ">
                     <svg className="h-3 w-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z" /></svg>
@@ -173,7 +126,7 @@ const Homebanner = () => {
               </div>
             </div>
           </div>
-          <div className="w-3/4">
+          <div className="w-full lg:w-3/4">
             <div id="hero">
               <div class="hero">
                 <figure class="on">
@@ -202,22 +155,7 @@ const Homebanner = () => {
                 </figure>
               </div>
             </div>
-            {/* <div className="accordion">
-              <ul>
-                {BannerAccordionContent.map((bannerData) =>
-                  <li key={bannerData.id}>
-                    <div>
-                      <img src={bannerData.imgPath} alt="" />
-                      <a href="#" className="sliderLink">
-                        <h2>{bannerData.heading}</h2>
-                        <p>{bannerData.subheading}
-                        </p>
-                      </a>
-                    </div>
-                  </li>
-                )}
-              </ul>
-            </div> */}
+    
           </div>
         </div>
 
@@ -252,7 +190,7 @@ const Homebanner = () => {
 
                     <div className="text-center">
                       <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-white flex justify-center">
-                        <div className="mt-1 flex rounded-md w-[380px] z-[10] autoTypeSearch shadow-autoTypeBoxShadow" >
+                        <div className="mt-1 flex rounded-md w-full lg:w-[380px] z-[10] autoTypeSearch shadow-autoTypeBoxShadow" >
                           <div className="relative flex flex-grow items-stretch focus-within:z-10 justify-center">
                             <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-2 h-full w-full border border-grey-border bg-white">
                               <svg className="h-3 w-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z" /></svg>

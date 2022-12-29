@@ -59,8 +59,8 @@ industries: [
     return (
       <footer className="bg-graybg pt-sp-big relative">
         <div className="container-none md:container lg:container mx-auto px-3 md:px-0">
-            <div className='w-full flex bg-white shadow-xl lg:max-w-[1454px] max-w-[90%] md:max-w-full mx-auto px-6 md:px-3 py-6'>
-              <div className='w-2/5'>
+            <div className='w-full flex sm:flex-wrap bg-white shadow-xl lg:max-w-[1454px] max-w-[90%] md:max-w-full sm:max-w-full mx-auto px-6 md:px-3 sm:px-3 py-6'>
+              <div className='w-2/5  sm:w-full'>
                   <h3 className='text-xl text-brand font-bold mb-1'>Contact</h3>
                   <p className='lg:text-base text-sm text-secondary w-4/6'>We are ready to lead you into the future of B2B commerce and Supply Chain.</p>
                   <div className='flex items-start mt-3'>
@@ -87,21 +87,21 @@ industries: [
                       </div>
                   </div>
               </div>
-              <div className='w-3/5 '>
+              <div className='w-3/5 sm:w-full'>
                   <Contactform />
               </div>
             </div>
-            <div className='w-full flex lg:max-w-[1454px] items-center max-w-[90%] md:max-w-full mx-auto py-6'>
-                <div className='w-1/2'>
+            <div className='w-full flex sm:flex-wrap lg:max-w-[1454px] items-center max-w-[90%] md:max-w-full sm:max-w-full mx-auto py-6'>
+                <div className='w-1/2 sm:w-full'>
                     <Subscribe />
                 </div>
-                <div className='w-1/2'>
+                <div className='w-1/2 sm:w-full mt-4'>
                     <Socialicons />
                 </div>
             </div>
         </div>
         <div className='border-t border-[#E1E1E8]'>
-          <div className="container-none md:container lg:container mx-auto px-3 md:px-0">
+          <div className="container-none md:container lg:container mx-auto px-3 md:px-0 sm:px-0">
               <div className='flex lg:max-w-[1454px] max-w-[90%] md:max-w-full mx-auto'>
                 <ul className='items-start flex w-full justify-between mt-2 md:hidden sm:hidden'>
                   <li className='text-sm font-bold w-[20%]'>
@@ -120,32 +120,32 @@ industries: [
                     <Link href="/about">Career</Link>
                   </li>
                 </ul>
-                <ul className='lg:hidden flex w-full  my-2 xl:hidden items-center'>
-                  <li className='text-sm font-bold pr-2'>
+                <ul className='lg:hidden flex w-full my-2 xl:hidden items-center'>
+                  <li className='text-sm font-bold pr-2 sm:text-xs sm:pr-1'>
                     <Link href="/about">About</Link>
                   </li>|
-                  <li className='text-sm font-bold pl-2 mr-2'>
+                  <li className='text-sm font-bold pl-2 mr-2  sm:text-xxs sm:pr-1 sm:pl-1 sm:mr-0'>
                     <Link href="/about">Our Story</Link>
                   </li>|
-                  <li className='text-sm font-bold pl-2 mr-2'>
+                  <li className='text-sm font-bold pl-2 mr-2  sm:text-xxs sm:pr-1 sm:pl-1 sm:mr-0'>
                     <Link href="/about">Leadership</Link>
                   </li>|
-                  <li className='text-sm font-bold pl-2 mr-2'>
+                  <li className='text-sm font-bold pl-2 mr-2  sm:text-xxs sm:pr-1 sm:pl-1 sm:mr-0'>
                     <Link href="/about">News</Link>
                   </li>|
-                  <li className='text-sm font-bold  pl-2 mr-2'>
+                  <li className='text-sm font-bold  pl-2 mr-2  sm:text-xxs sm:pr-1 sm:pl-1 sm:mr-0'>
                     <Link href="/about">Career</Link>
                   </li>
                 </ul>
               </div>
-              <div className='flex md:flex-wrap justify-between md:justify-start  lg:max-w-[1454px] max-w-[90%] md:max-w-full mx-auto'>
+              <div className='flex md:flex-wrap sm:flex-wrap justify-between md:justify-start  lg:max-w-[1454px] max-w-[90%] md:max-w-full mx-auto'>
                 {/* industries list */}
-              <div className='w-[20%] md:w-1/3 md:mb-4'>
-                <h3 className="text-sm font-bold mt-2">Your Industries</h3>
+              <div className='w-[20%] md:w-1/3 sm:w-1/2 md:mb-4  sm:mb-4'>
+                <h3 className="text-sm font-bold mt-2 sm:text-xs">Your Industries</h3>
                 <ul role="list" className="mt-2 space-y-1">
                   {navigation.industries.map((item) => (
                     <li key={item.name} className="text-sm ">
-                      <a href={item.href} className="text-sm text-gray-500 hover:text-gray-900">
+                      <a href={item.href} className="text-sm sm:text-xs text-gray-500 hover:text-gray-900">
                         {item.name}
                       </a>
                     </li>
@@ -153,12 +153,12 @@ industries: [
                 </ul>
               </div>
               {/* Solutions list */}
-              <div className='w-[20%] md:w-1/3 md:mb-4'>
-                <h3 className="text-sm font-bold mt-2">Our Solutions</h3>
+              <div className='w-[20%] md:w-1/3 sm:w-1/2 md:mb-4 sm:mb-4'>
+                <h3 className="text-sm font-bold mt-2 sm:text-xs">Our Solutions</h3>
                 <ul role="list" className="mt-2 space-y-1">
                   {navigation.solutions.map((item) => (
-                    <li key={item.name} className="lg:text-base text-sm ">
-                      <a href={item.href} className="text-sm text-gray-500 hover:text-gray-900">
+                    <li key={item.name} className="text-sm ">
+                      <a href={item.href} className="text-sm sm:text-xs text-gray-500 hover:text-gray-900">
                         {item.name}
                       </a>
                     </li>
@@ -166,12 +166,12 @@ industries: [
                 </ul>
               </div>
               {/* Optimise Procurement list */}
-              <div className='w-[20%] md:w-1/3 md:mb-4'>
-                <h3 className="text-sm font-bold mt-2">Optimise Procurement</h3>
+              <div className='w-[20%] md:w-1/3 sm:w-1/2 md:mb-4 sm:mb-4'>
+                <h3 className="text-sm font-bold mt-2 sm:text-xs">Optimise Procurement</h3>
                 <ul role="list" className="mt-2 space-y-1">
                   {navigation.optimize.map((item) => (
-                    <li key={item.name} className="lg:text-base text-sm ">
-                      <a href={item.href} className="text-sm text-gray-500 hover:text-gray-900">
+                    <li key={item.name} className="text-sm ">
+                      <a href={item.href} className="text-sm sm:text-xs text-gray-500 hover:text-gray-900">
                         {item.name}
                       </a>
                     </li>
@@ -179,12 +179,12 @@ industries: [
                 </ul>
               </div>
               {/* Digital Transformation list */}
-              <div className='w-[20%] md:w-1/3'>
-                <h3 className="text-sm font-bold mt-2">Digital Transformation</h3>
+              <div className='w-[20%] md:w-1/3 sm:w-1/2 sm:mb-4'>
+                <h3 className="text-sm font-bold mt-2 sm:text-xs">Digital Transformation</h3>
                 <ul role="list" className="mt-2 space-y-1">
                   {navigation.digital.map((item) => (
-                    <li key={item.name} className="lg:text-base text-sm ">
-                      <a href={item.href} className="text-sm text-gray-500 hover:text-gray-900">
+                    <li key={item.name} className="text-sm ">
+                      <a href={item.href} className="text-sm sm:text-xs text-gray-500 hover:text-gray-900">
                         {item.name}
                       </a>
                     </li>
@@ -192,12 +192,12 @@ industries: [
                 </ul>
               </div>
               {/* Resources list */}
-              <div className='w-[20%] md:w-1/3'>
-                <h3 className="text-sm font-bold mt-2">Resources</h3>
+              <div className='w-[20%] md:w-1/3 sm:w-1/2 sm:mb-4'>
+                <h3 className="text-sm font-bold mt-2 sm:text-xs">Resources</h3>
                 <ul role="list" className="mt-2 space-y-1">
                   {navigation.digital.map((item) => (
-                    <li key={item.name} className="lg:text-base text-sm ">
-                      <a href={item.href} className="text-sm text-gray-500 hover:text-gray-900">
+                    <li key={item.name} className="text-sm ">
+                      <a href={item.href} className="text-sm sm:text-xs text-gray-500 hover:text-gray-900">
                         {item.name}
                       </a>
                     </li>
@@ -208,9 +208,9 @@ industries: [
           </div>
         </div>
         <div className='bg-[#E1E1E8] py-4 mt-6'>
-              <div className='container-none md:container lg:container mx-auto px-3 md:px-0'>
-                <div className='w-full justify-between flex lg:max-w-[1454px] max-w-[90%] md:max-w-full mx-auto'>
-                  <ul className='flex '>
+              <div className='container-none md:container lg:container mx-auto px-3 md:px-0 sm:px-2'>
+                <div className='w-full justify-between flex sm:flex-wrap sm:justify-center lg:max-w-[1454px] max-w-[90%] md:max-w-full sm:max-w-full mx-auto'>
+                  <ul className='flex sm:w-full sm:mb-3 sm:justify-center'>
                     <li className='mr-3'>
                       <Link className='text-sm text-secondary' href='/terms'>Terms of Use</Link>
                     </li>
@@ -218,7 +218,7 @@ industries: [
                       <Link className='text-sm text-secondary' href='/privacypolicy'>Privacy Policy</Link>
                     </li>
                   </ul>
-                  <div className='text-right text-sm text-secondary'>
+                  <div className='text-right text-sm text-secondary sm:w-full sm:text-center'>
                       ©2022 Moglix. All Rights Reserved
                   </div>
                 </div>

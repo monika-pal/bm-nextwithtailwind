@@ -9,7 +9,7 @@ const Topbar = ()=> {
     {({ open }) => (
         <>
         <div className="bg-graybg">
-            <div className="container md:container lg:container mx-auto px-3 md:px-0">
+            <div className="container md:container lg:container mx-auto px-3 md:px-0 sm:px-2">
                 <div className="flex justify-between items-center">
                     <ul>
                         <li className="font-regular text-sm sm:text-xs">
@@ -57,9 +57,6 @@ const Topbar = ()=> {
                 </li>
                 <li className="w-full h-[30px] leading-[30px] px-4 text-xs font-medium text-gray">
                     <Link href='/about'>Events</Link>
-                </li>
-                <li className="w-full h-[30px] leading-[30px] px-4 text-xs font-medium text-gray">
-                    <Link href='/contact'>Contact Us</Link>
                 </li>
                 <li className="w-full h-[30px] leading-[30px] px-4 text-xs font-medium text-gray pr-0">
                     <Link href='/resources'>Resources</Link>
