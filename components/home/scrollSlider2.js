@@ -52,9 +52,9 @@ export default function scrollSlider2() {
             <Controller>
                 <Scene triggerHook="onLeave" duration={1000} pin >
                     {(progress) => (
-                        <section className='bg-graybg py-3 overflow-hidden h-[120vh] lg:h-[100vh] flex flex-col '>
+                        <section className='bg-graybg py-3 overflow-hidden h-[120vh] lg:h-[120vh] xl:h-[100vh] flex flex-col '>
                             <div className="container-none md:container lg:container mx-auto px-3">
-                                <h2 className='text-xxl lg:text-heading1 font-bold text-secondary text-center'>Step inside the world of Moglix</h2>
+                                <h2 className='text-xxl xl:text-heading1 font-bold text-secondary text-center'>Step inside the world of Moglix</h2>
                                 <h3 className='text-lg font-regular text-secondary text-center'>Don’t miss out on our latest headlines and announcements.</h3>
                             </div>
                             <div>
@@ -71,7 +71,7 @@ export default function scrollSlider2() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="sticky flex scrollSliderSectionHeight align-middle" >
+                            <div className="sticky flex pt-[5%] lg:pt-[10px] xl:pt-[5%] align-middle" >
 
                                 <Timeline totalProgress={progress} paused>
                                     <Timeline
@@ -79,11 +79,11 @@ export default function scrollSlider2() {
                                             <>
                                                 {ScrollSliderContent.map((ScrollSliderPostData) =>
 
-                                                    <div className="flex mr-4 scrollSliderCardHeight">
+                                                    <div className="flex mr-6 lg:mr-4 xl:mr-4 scrollSliderCardHeight">
                                                         <div className=' bg-white' key={ScrollSliderPostData.id}>
-                                                            <a className='block w-[340px]' href="#">
+                                                            <a className='block  w-[300px] lg:w-[340px] xl:w-[340px]' href="#">
                                                                 <img src={ScrollSliderPostData.PostImg} alt="" />
-                                                                <div className=' p-[30px]'>
+                                                                <div className='p-[15px] xl:p-[30px]'>
                                                                     <span className='text-date-grey text-sm mb-1'>{ScrollSliderPostData.PostDate}</span>
                                                                     <p className='text-base2 font-semibold '>{ScrollSliderPostData.PostHeading}
                                                                     </p>
@@ -110,7 +110,7 @@ export default function scrollSlider2() {
                                     </Timeline>
                                 </Timeline>
                             </div>
-                             <div className="w-[100%] mt-4 lg:mt-[5%] flex justify-center">
+                             <div className="w-[100%] mt-5 xl:mt-[5%] flex justify-center">
                              <button className='w-[230px] text-center justify-center items-center font-bold lg:text-base2 text-base text-white bg-brand h-[50px] flex shadow-[0 5px 10px rgba(217, 35, 45, 0.24)] hover:bg-brandhover'><span className='mr-1'>Know More</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path fill="white" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg></button>
                              </div>
                            
