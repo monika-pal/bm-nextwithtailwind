@@ -81,7 +81,7 @@ const Homebanner = () => {
 
   return (
     <div>
-      <nav className="container-none md:container lg:container mx-auto px-3">
+      <nav className="container md:container lg:container mx-auto px-3">
         <div className="flex">
 
           <div className="w-1/4 flex items-center ">

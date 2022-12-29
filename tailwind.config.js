@@ -14,9 +14,9 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      // sm: {'max': '728px'},
-      // md: {'max': '991px'},
-      // lg: {'max': '1454px'},
+      sm: {'max': '728px'},
+      md: {'max': '991px'},
+      lg: {'max': '1454px'},
       padding: {
         DEFAULT: '3.25rem',
         sm: '1.25rem',
@@ -71,7 +71,7 @@ module.exports = {
         textxl: ['26px', '34px'],
         xxl: ['28px', '40px'],
         heading1: ['44px', '60px'],
-        heading2: ['34px', '50px'],
+        heading2: ['32px', '45px'],
         headingSmall: ['18px', '22px'],
         headingbold: ['54px', '64px']
       },
@@ -86,16 +86,16 @@ module.exports = {
         'blue': '#1fb6ff',
         'green': '#13ce66',
         'gray-dark': '#273444',
-        'white': '#fff',
-        'black': '#000',
-        'bordercolor': '#D9D9D9',
-        'grey-border': '#707070;',
+        'white':'#fff',
+        'black':'#000',
+        'bordercolor':'#D9D9D9',
+        'grey-border':'#707070;',
         'progressColor1': '#F9C74F',
         'progressColor2': '#F8961E',
         'progressColor3': '#F3722C',
         'progressColor4': '#D9232D',
-        'date-grey': '#90909d',
-        'anchor-blue': '#2369D9'
+        'date-grey' :'#90909d',
+        'anchor-blue' : '#2369D9'
       },
       fontFamily: {
         rubik: ['Rubik', 'sans-serif']
@@ -124,7 +124,10 @@ module.exports = {
           '@screen lg': {
             maxWidth: '1454px',
           },
-
+          '@screen xl': {
+            maxWidth: '1454px',
+          },
+         
         }
       })
     }

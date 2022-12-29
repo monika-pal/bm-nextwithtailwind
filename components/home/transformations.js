@@ -4,7 +4,7 @@ export default function transformations() {
   return (
     <div>
       <section className='relative py-sp-big pt-0'>
-        <div className='container-none md:container lg:container mx-auto py-5 px-3 text-center'>
+        <div className='container md:container lg:container mx-auto py-5 px-3 text-center'>
           <div className='flex flex-wrap '>
             <div className='w-1/2 pr-[20px] pl-[40px]'>
               <h2 className='text-lg text-brand font-medium text-left mb-2'>Transformations</h2>
