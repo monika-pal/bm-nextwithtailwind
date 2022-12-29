@@ -16,7 +16,7 @@ const Topbar = ()=> {
                             <a className="text-secondary block" href= "https://india.paperex-expo.com/Home" target="_blank" rel="noreferrer">Meet us at <span className="font-bold">Paperex</span> 2022. &#8594;</a> 
                         </li>
                     </ul>
-                    <ul className="flex items-center md:hidden sm:hidden lg:hidden">
+                    <ul className="flex items-center md:hidden sm:hidden">
                         <li className="sm:px-1 px-4 text-xs font-medium text-gray">
                         <Link href='/career'>Careers</Link> 
                         </li>
@@ -30,12 +30,12 @@ const Topbar = ()=> {
                         <Link href='/resources'>Resources</Link>
                         </li>
                     </ul>
-                    <ul className="flex items-center md:hidden sm:hidden lg:hidden">
+                    <ul className="flex items-center lg:hidden ml-[auto]">
                         <li className="sm:px-1 px-3 text-xs font-medium py-1 lg:py-1 mx-1 bg-brand">
                         <Link href='/contact' className="block text-xs text-white">Contact Us</Link>
                         </li>
                     </ul>
-                    <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none ">
+                    <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none lg:hidden">
                         <span className="sr-only">Open main menu</span>
                         {open ? (
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z"/></svg>
@@ -49,7 +49,7 @@ const Topbar = ()=> {
             </div> 
         </div>
         
-        <Disclosure.Panel className="sm:visible lg:hidden">
+        <Disclosure.Panel className="sm:visible">
             <div className="sm:container md:container mx-auto px-3 relative">
             <ul className="flex flex-wrap absolute items-center w-[150px] bg-white shadow right-0 z-99">
                 <li className="w-full h-[30px] leading-[30px] px-4 text-xs font-medium text-gray">

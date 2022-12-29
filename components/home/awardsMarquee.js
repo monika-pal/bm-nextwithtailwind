@@ -6,7 +6,7 @@ const  AwardsMarquee = () => {
   return (
     <div>
           <section className=' py-sp-big'>
-          <h2 className='text-heading1 font-bold text-secondary text-center'>Transforming B2B commerce and supply chain</h2>
+          <h2 className='text-heading1 font-bold text-secondary text-center md:text-xxl'>Transforming B2B commerce and supply chain</h2>
          <h3 className='text-lg font-regular text-secondary text-center mb-[60px]'>Our work is being recognised by renowned organisations</h3>
         <Marquee duration={18000} background="#ffffff" height="175px" pauseOnHover={true}>
 

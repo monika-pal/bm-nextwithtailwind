@@ -58,8 +58,8 @@ industries: [
  
     return (
       <footer className="bg-graybg pt-sp-big relative">
-        <div className="container-none md:container lg:container mx-auto px-3">
-            <div className='w-full flex bg-white shadow-xl lg:max-w-[1454px] max-w-[90%] mx-auto px-6 py-6'>
+        <div className="container-none md:container lg:container mx-auto px-3 md:px-0">
+            <div className='w-full flex bg-white shadow-xl lg:max-w-[1454px] max-w-[90%] md:max-w-full mx-auto px-6 md:px-3 py-6'>
               <div className='w-2/5'>
                   <h3 className='text-xl text-brand font-bold mb-1'>Contact</h3>
                   <p className='lg:text-base text-sm text-secondary w-4/6'>We are ready to lead you into the future of B2B commerce and Supply Chain.</p>
@@ -87,11 +87,11 @@ industries: [
                       </div>
                   </div>
               </div>
-              <div className='w-3/5'>
+              <div className='w-3/5 '>
                   <Contactform />
               </div>
             </div>
-            <div className='w-full flex lg:max-w-[1454px] items-center max-w-[90%] mx-auto py-6'>
+            <div className='w-full flex lg:max-w-[1454px] items-center max-w-[90%] md:max-w-full mx-auto py-6'>
                 <div className='w-1/2'>
                     <Subscribe />
                 </div>
@@ -101,34 +101,51 @@ industries: [
             </div>
         </div>
         <div className='border-t border-[#E1E1E8]'>
-          <div className="container-none md:container lg:container mx-auto px-3">
-              <div className='flex lg:max-w-[1454px] max-w-[90%] mx-auto'>
-                <ul className='items-start flex w-full justify-between mt-2'>
-                  <li className='text-sm font-bold lg:text-base w-[20%]'>
+          <div className="container-none md:container lg:container mx-auto px-3 md:px-0">
+              <div className='flex lg:max-w-[1454px] max-w-[90%] md:max-w-full mx-auto'>
+                <ul className='items-start flex w-full justify-between mt-2 md:hidden sm:hidden'>
+                  <li className='text-sm font-bold w-[20%]'>
                     <Link href="/about">About</Link>
                   </li>
-                  <li className='text-sm font-bold lg:text-base w-[20%]'>
+                  <li className='text-sm font-bold w-[20%]'>
                     <Link href="/about">Our Story</Link>
                   </li>
-                  <li className='text-sm font-bold lg:text-base w-[20%]'>
+                  <li className='text-sm font-bold w-[20%]'>
                     <Link href="/about">Leadership</Link>
                   </li>
-                  <li className='text-sm font-bold lg:text-base w-[20%]'>
+                  <li className='text-sm font-bold w-[20%]'>
                     <Link href="/about">News</Link>
                   </li>
-                  <li className='text-sm font-bold lg:text-base w-[20%]'>
+                  <li className='text-sm font-bold w-[20%]'>
+                    <Link href="/about">Career</Link>
+                  </li>
+                </ul>
+                <ul className='lg:hidden flex w-full  my-2 xl:hidden items-center'>
+                  <li className='text-sm font-bold pr-2'>
+                    <Link href="/about">About</Link>
+                  </li>|
+                  <li className='text-sm font-bold pl-2 mr-2'>
+                    <Link href="/about">Our Story</Link>
+                  </li>|
+                  <li className='text-sm font-bold pl-2 mr-2'>
+                    <Link href="/about">Leadership</Link>
+                  </li>|
+                  <li className='text-sm font-bold pl-2 mr-2'>
+                    <Link href="/about">News</Link>
+                  </li>|
+                  <li className='text-sm font-bold  pl-2 mr-2'>
                     <Link href="/about">Career</Link>
                   </li>
                 </ul>
               </div>
-              <div className='flex justify-between  lg:max-w-[1454px] max-w-[90%] mx-auto'>
+              <div className='flex md:flex-wrap justify-between md:justify-start  lg:max-w-[1454px] max-w-[90%] md:max-w-full mx-auto'>
                 {/* industries list */}
-              <div className='w-[20%]'>
-                <h3 className="text-sm font-bold lg:text-base mt-2">Your Industries</h3>
+              <div className='w-[20%] md:w-1/3 md:mb-4'>
+                <h3 className="text-sm font-bold mt-2">Your Industries</h3>
                 <ul role="list" className="mt-2 space-y-1">
                   {navigation.industries.map((item) => (
-                    <li key={item.name} className="lg:text-base text-sm ">
-                      <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
+                    <li key={item.name} className="text-sm ">
+                      <a href={item.href} className="text-sm text-gray-500 hover:text-gray-900">
                         {item.name}
                       </a>
                     </li>
@@ -136,12 +153,12 @@ industries: [
                 </ul>
               </div>
               {/* Solutions list */}
-              <div className='w-[20%]'>
-                <h3 className="text-sm font-bold lg:text-base mt-2">Our Solutions</h3>
+              <div className='w-[20%] md:w-1/3 md:mb-4'>
+                <h3 className="text-sm font-bold mt-2">Our Solutions</h3>
                 <ul role="list" className="mt-2 space-y-1">
                   {navigation.solutions.map((item) => (
                     <li key={item.name} className="lg:text-base text-sm ">
-                      <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
+                      <a href={item.href} className="text-sm text-gray-500 hover:text-gray-900">
                         {item.name}
                       </a>
                     </li>
@@ -149,12 +166,12 @@ industries: [
                 </ul>
               </div>
               {/* Optimise Procurement list */}
-              <div className='w-[20%]'>
-                <h3 className="text-sm font-bold lg:text-base mt-2">Optimise Procurement</h3>
+              <div className='w-[20%] md:w-1/3 md:mb-4'>
+                <h3 className="text-sm font-bold mt-2">Optimise Procurement</h3>
                 <ul role="list" className="mt-2 space-y-1">
                   {navigation.optimize.map((item) => (
                     <li key={item.name} className="lg:text-base text-sm ">
-                      <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
+                      <a href={item.href} className="text-sm text-gray-500 hover:text-gray-900">
                         {item.name}
                       </a>
                     </li>
@@ -162,12 +179,12 @@ industries: [
                 </ul>
               </div>
               {/* Digital Transformation list */}
-              <div className='w-[20%]'>
-                <h3 className="text-sm font-bold lg:text-base mt-2">Digital Transformation</h3>
+              <div className='w-[20%] md:w-1/3'>
+                <h3 className="text-sm font-bold mt-2">Digital Transformation</h3>
                 <ul role="list" className="mt-2 space-y-1">
                   {navigation.digital.map((item) => (
                     <li key={item.name} className="lg:text-base text-sm ">
-                      <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
+                      <a href={item.href} className="text-sm text-gray-500 hover:text-gray-900">
                         {item.name}
                       </a>
                     </li>
@@ -175,12 +192,12 @@ industries: [
                 </ul>
               </div>
               {/* Resources list */}
-              <div className='w-[20%]'>
-                <h3 className="text-sm font-bold lg:text-base mt-2">Resources</h3>
+              <div className='w-[20%] md:w-1/3'>
+                <h3 className="text-sm font-bold mt-2">Resources</h3>
                 <ul role="list" className="mt-2 space-y-1">
                   {navigation.digital.map((item) => (
                     <li key={item.name} className="lg:text-base text-sm ">
-                      <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
+                      <a href={item.href} className="text-sm text-gray-500 hover:text-gray-900">
                         {item.name}
                       </a>
                     </li>
@@ -191,8 +208,8 @@ industries: [
           </div>
         </div>
         <div className='bg-[#E1E1E8] py-4 mt-6'>
-              <div className='container-none md:container lg:container mx-auto px-3'>
-                <div className='w-full justify-between flex lg:max-w-[1454px] max-w-[90%] mx-auto'>
+              <div className='container-none md:container lg:container mx-auto px-3 md:px-0'>
+                <div className='w-full justify-between flex lg:max-w-[1454px] max-w-[90%] md:max-w-full mx-auto'>
                   <ul className='flex '>
                     <li className='mr-3'>
                       <Link className='text-sm text-secondary' href='/terms'>Terms of Use</Link>

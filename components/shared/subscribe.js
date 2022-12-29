@@ -4,7 +4,7 @@ export default class Subscribe extends Component {
   render() {
     return (
         <div>
-        <div className="mt-1 relative w-[80%]">
+        <div className="mt-1 relative w-[80%] md:w-full">
         <input
           type="email"
           name="email"
