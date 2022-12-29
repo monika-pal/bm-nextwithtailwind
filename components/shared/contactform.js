@@ -5,8 +5,8 @@ const Contactform =()=> {
     return (
       
         <form action="#" method="POST">
-            <div className='flex items-start justify-between w-full mt-5'>
-                    <div className='w-[48%]'>
+            <div className='flex items-start sm:flex-wrap justify-between w-full mt-5'>
+                    <div className='w-[48%] sm:w-full'>
                         <div className='pb-5'>
                         <input
                             type="text"
@@ -44,7 +44,7 @@ const Contactform =()=> {
                             />
                         </div>
                     </div>
-                    <div className='w-[48%]'>
+                    <div className='w-[48%] sm:w-full'>
                         <div className='pb-5'>
                         <select
                             id="enterprise"

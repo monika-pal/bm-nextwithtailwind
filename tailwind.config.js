@@ -62,6 +62,7 @@ module.exports = {
         'pulse-new': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) 2s;'
       },
       fontSize: {
+        xxs:['11px','16px'],
         xs: ['12px', '18px'],
         sm: ['14px', '20px'],
         base: ['16px', '24px'],

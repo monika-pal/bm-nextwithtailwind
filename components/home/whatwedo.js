@@ -5,13 +5,11 @@ import styles from  '../../styles/solutions.module.scss';
 import 'animate.css';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
-
-
+import {isMobile} from 'react-device-detect';
 
 
  const WhatWeDo=()=> {
-  
- 
+
   
   
   const {ref, inView} = useInView();
@@ -89,6 +87,8 @@ import { useInView } from 'react-intersection-observer';
    
     
   }, [inView]);
+
+  
   
  
     return (
@@ -97,8 +97,8 @@ import { useInView } from 'react-intersection-observer';
           <section className="w-[100%] relative">
             <div className="py-sp-big">
                 <div className='container md:container lg:container mx-auto py-5 px-3 md:px-0'>
-                    <div className='flex md:flex-wrap items-center'>
-                        <div className='w-[25%] md:w-full' >
+                    <div className='flex md:flex-wrap sm:flex-wrap items-center'>
+                        <div className='w-[25%] md:w-full sm:w-full' >
                             <h3 className='lg:text-xl text-lg text-brand font-medium mb-2'>What we do</h3>
                             <p className='lg:text-textxxl text-lg text-secondary mb-5 lg:leading-[45px] leading-[40px]'>Transforming businesses with tech-enabled procurement & improving supply chain with customized manufacturing supplies, Moglix drives efficiency all around you.</p>
                             <button className='w-[230px] text-center justify-center items-center font-bold lg:text-base2 text-base text-white bg-brand h-[50px] flex shadow-[0 5px 10px rgba(217, 35, 45, 0.24)] hover:bg-brandhover'><span className='mr-1'>Know More</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path fill="white" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg></button>
@@ -135,7 +135,7 @@ import { useInView } from 'react-intersection-observer';
                             </div> 
                             
                         </div>
-                        <div className='w-[25%] md:w-full md:mt-[40px] sm:mt-[40px]'>
+                        <div className='w-[25%] md:w-full sm:w-full md:mt-[40px] sm:mt-[40px]'>
                             <div className='border border-[#F3722C] p-3 rounded-[12px] shadow-[0 30px rgba(209, 227, 255, 0.6)] mb-2'>
                                     <h4 className='text-secondary text-lg font-semibold flex justify-between flex-wrap mb-0'>
                                          <span>Procurement Optimisation</span>
@@ -177,6 +177,7 @@ import { useInView } from 'react-intersection-observer';
                     </div>
                 </div>
             </div>
+            
           </section>
       
         

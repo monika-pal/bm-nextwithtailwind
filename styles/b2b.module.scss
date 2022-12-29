@@ -49,3 +49,17 @@
         }
     }
 }
+@media screen and (max-width:767px) {
+    .dashedLine{
+        &.dashedLine1{
+            left:18px;
+        }
+        &.dashedLine6{
+            left: 94.8%;
+        }
+        &.dashedLine2,  &.dashedLine4{
+            display: none;
+        }
+    }
+
+}
