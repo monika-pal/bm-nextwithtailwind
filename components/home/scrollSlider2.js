@@ -1,7 +1,7 @@
 import React, { useRef, useState, useLayoutEffect, useCallback, } from "react"
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
-var document = require("global/document")
+var document = require("global/document");
 const ScrollSliderContent = [
     {
         id: 1,
